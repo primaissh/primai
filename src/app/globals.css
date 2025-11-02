@@ -120,6 +120,58 @@
     @apply bg-background text-foreground;
   }
 
+  /* Mobile-first touch targets - ensure minimum 44px */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Mobile-first spacing utilities */
+  .mobile-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+
+  .mobile-margin {
+    @apply mx-4 md:mx-6 lg:mx-8;
+  }
+
+  /* Mobile-first text sizing */
+  .mobile-text-xs {
+    @apply text-xs md:text-sm;
+  }
+
+  .mobile-text-sm {
+    @apply text-sm md:text-base;
+  }
+
+  .mobile-text-base {
+    @apply text-base md:text-lg;
+  }
+
+  .mobile-text-lg {
+    @apply text-lg md:text-xl;
+  }
+
+  .mobile-text-xl {
+    @apply text-xl md:text-2xl;
+  }
+
+  .mobile-text-2xl {
+    @apply text-2xl md:text-3xl;
+  }
+
+  .mobile-text-3xl {
+    @apply text-3xl md:text-4xl;
+  }
+
+  /* Mobile-first button styles */
+  .mobile-btn {
+    @apply px-4 py-3 md:px-6 md:py-4 rounded-lg font-medium min-h-[44px] text-sm md:text-base;
+  }
+
+  .mobile-btn-lg {
+    @apply px-6 py-4 md:px-8 md:py-5 rounded-xl font-semibold min-h-[48px] text-base md:text-lg;
+  }
+
   /* Custom 3D perspective utilities */
   .perspective-1200 {
     perspective: 1200px;

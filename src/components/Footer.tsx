@@ -13,12 +13,6 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white pt-12 sm:pt-20 lg:pt-26">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Mobile Logo */}
-        <img
-          src="/logo.svg"
-          alt="PrimAI Logo"
-          className="mb-7.5 h-6 block sm:hidden"
-        />
 
         {/* Main Heading */}
         <h3 className="px-4 text-sm font-medium sm:text-center sm:text-4xl sm:leading-[60px] mb-1">
@@ -28,7 +22,6 @@ export default function Footer() {
           Swift<span className="text-blue-500">.</span> Seamless<span className="text-blue-500">.</span> Secure<span className="text-blue-500">.</span>
         </h2>
 
-        {/* Links Grid - Desktop Layout */}
         <div className="hidden lg:block mb-8">
           <div className="grid grid-cols-5 gap-8">
             {/* Row 1, Col 1 - Empty */}
@@ -64,7 +57,12 @@ export default function Footer() {
             
             {/* Row 1, Col 5 - Empty */}
             <div className="text-start p-4"></div>
+          </div>
 
+          {/* Our Services Heading - Below Row 1 */}
+          <h4 className="text-xl font-semibold mb-6 text-center mt-8">Our Services</h4>
+
+          <div className="grid grid-cols-5 gap-8">
             {/* Row 2, Col 1 - Crypto & Blockchain Solutions */}
             <div className="text-start p-4">
               <h5 className="text-sm font-semibold mb-3">Crypto & Blockchain Solutions</h5>
@@ -121,82 +119,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Mobile Accordions */}
-        <div className="block sm:hidden w-full mb-8">
-          {/* Product & Features */}
-          <div className="border-b border-gray-700 mb-5">
-            <button
-              onClick={() => toggleAccordion('product')}
-              className="w-full flex items-center justify-between py-4 text-left text-base font-semibold"
-            >
-              Featured Products             
-              <ChevronDown className={`w-6 h-6 transition-transform ${openAccordion === 'product' ? 'rotate-180' : ''}`} />
-            </button>
-            <div className={`pb-4 ${openAccordion === 'product' ? 'block' : 'hidden'}`}>
-              <div className="space-y-3 text-gray-300">
-                <div><a href="/card" className="hover:text-white">Card</a></div>
-                <div><a href="/global-payout" className="hover:text-white">Global Payout</a></div>
-                <div><a href="/multi-currency-wallet" className="hover:text-white">Multi-Currency Wallet</a></div>
-                <div><a href="/credit" className="hover:text-white">Credit</a></div>
-                <div><a href="/earn" className="hover:text-white">Earn</a></div>
-                <div><a href="/swap" className="hover:text-white">Swap</a></div>
-                <div><a href="/p2p-marketplace" className="hover:text-white">P2P Marketplace</a></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Company */}
-          <div className="border-b border-gray-700 mb-5">
-            <button
-              onClick={() => toggleAccordion('company')}
-              className="w-full flex items-center justify-between py-4 text-left text-base font-semibold"
-            >
-              Company
-              <ChevronDown className={`w-6 h-6 transition-transform ${openAccordion === 'company' ? 'rotate-180' : ''}`} />
-            </button>
-            <div className={`pb-4 ${openAccordion === 'company' ? 'block' : 'hidden'}`}>
-              <div className="space-y-3 text-gray-300">
-                <div><a href="/about-us" className="hover:text-white">About Us</a></div>
-                <div><a href="/community" className="hover:text-white">Community</a></div>
-                <div><a href="/affiliates" className="hover:text-white">Affiliate</a></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Resources */}
-          <div className="border-b border-gray-700 mb-5">
-            <button
-              onClick={() => toggleAccordion('resources')}
-              className="w-full flex items-center justify-between py-4 text-left text-base font-semibold"
-            >
-              Resources
-              <ChevronDown className={`w-6 h-6 transition-transform ${openAccordion === 'resources' ? 'rotate-180' : ''}`} />
-            </button>
-            <div className={`pb-4 ${openAccordion === 'resources' ? 'block' : 'hidden'}`}>
-              <div className="space-y-3 text-gray-300">
-                <div><a href="/news" className="hover:text-white">News</a></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Support */}
-          <div className="border-b border-gray-700 mb-5">
-            <button
-              onClick={() => toggleAccordion('support')}
-              className="w-full flex items-center justify-between py-4 text-left text-base font-semibold"
-            >
-              Support
-              <ChevronDown className={`w-6 h-6 transition-transform ${openAccordion === 'support' ? 'rotate-180' : ''}`} />
-            </button>
-            <div className={`pb-4 ${openAccordion === 'support' ? 'block' : 'hidden'}`}>
-              <div className="space-y-3 text-gray-300">
-                <div><a href="/contact-us" className="hover:text-white">Contact Us</a></div>
-                <div><a href="https://helpcenter.redotpay.com" className="hover:text-white">Help Center</a></div>
-                <div><a href="/terms" className="hover:text-white">Terms & Conditions</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
+       
 
         {/* Services Row - Mobile/Tablet */}
         <div className="block lg:hidden mb-8">
@@ -249,11 +172,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Download Button (Mobile) */}
-        <button className="w-full bg-white text-black border-none rounded-full py-4 px-6 text-lg font-medium flex items-center justify-center gap-3 mb-7.5 sm:hidden">
-          Download App
-          <QrCode className="w-6 h-6" />
-        </button>
+      
 
         {/* Social Links */}
         <div className="flex justify-center gap-10 mb-8">

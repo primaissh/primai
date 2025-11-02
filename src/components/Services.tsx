@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react";
 
-const slides = [
+// Service slides for carousel
+const serviceSlides = [
   {
     badge: "BLOCKCHAIN",
     badgeColor: "from-blue-600 to-purple-600",
     title: "Crypto & Blockchain Solutions",
-    description: "We design secure, scalable blockchain ecosystems that redefine transparency, trust, and digital ownership.",
+    description: "Secure, scalable blockchain ecosystems that redefine transparency, trust, and digital ownership.",
     features: [
       "Centralized Exchange (CEX)",
       "ICO (Initial Coin Offering)",
@@ -51,9 +52,9 @@ const slides = [
     badge: "TRADING",
     badgeColor: "from-green-400 to-teal-500",
     title: "Trading & Financial Tools",
-    description: " From market analytics to automated execution, our systems give you an intelligent edge in the world of digital finance.",
+    description: "From market analytics to automated execution, our systems give you an intelligent edge in the world of digital finance.",
     features: [
-      "AI-Powered Trading Bot ",
+      "AI-Powered Trading Bot",
       "P2P Trading Platform",
       "Carbon Marketing Solutions",
     ],
@@ -93,7 +94,7 @@ const slides = [
     title: "AI & Generative Technology",
     description: "Harnessing advanced AI to build generative solutions that think, adapt, and evolve — just like you.",
     features: [
-      "Gen AI Bot ",
+      "Gen AI Bot",
       "AI Chatbot",
     ],
     illustration: (
@@ -143,7 +144,7 @@ const slides = [
     title: "Education & Community",
     description: "A growing hub for innovators, learners, and creators — uniting people through knowledge, mentorship, and collaboration.",
     features: [
-      "Web3 Educational Platform ",
+      "Web3 Educational Platform",
       "MLM-Based Web3 Projects",
     ],
     illustration: (
@@ -230,82 +231,208 @@ const slides = [
   }
 ];
 
+// Mobile-first service cards
+const mobileServices = [
+  {
+    id: "blockchain",
+    title: "Crypto & Blockchain Solutions",
+    description: "Secure, scalable blockchain ecosystems for the decentralized future",
+    icon: "🔗",
+    gradient: "from-blue-500 to-purple-600",
+    features: [
+      "Centralized Exchange (CEX)",
+      "ICO (Initial Coin Offering)",
+      "RWA Tokenization",
+      "Layer 1 & Layer 2 Development",
+      "Custodian & Non-Custodian Wallets",
+      "Digital Identity on Blockchain"
+    ]
+  },
+  {
+    id: "trading",
+    title: "Trading & Financial Tools",
+    description: "AI-powered trading solutions for intelligent financial markets",
+    icon: "📈",
+    gradient: "from-green-500 to-teal-500",
+    features: [
+      "AI-Powered Trading Bot",
+      "P2P Trading Platform",
+      "Carbon Marketing Solutions"
+    ]
+  },
+  {
+    id: "ai",
+    title: "AI & Generative Technology",
+    description: "Advanced AI solutions that think, adapt, and evolve",
+    icon: "🤖",
+    gradient: "from-pink-500 to-yellow-500",
+    features: [
+      "Gen AI Bot",
+      "AI Chatbot"
+    ]
+  },
+  {
+    id: "education",
+    title: "Education & Community",
+    description: "Web3 educational platforms and community-driven projects",
+    icon: "🎓",
+    gradient: "from-teal-500 to-pink-500",
+    features: [
+      "Web3 Educational Platform",
+      "MLM-Based Web3 Projects"
+    ]
+  },
+  {
+    id: "marketing",
+    title: "Advanced Digital Marketing",
+    description: "Performance-driven marketing solutions for global brands",
+    icon: "📊",
+    gradient: "from-orange-500 to-red-500",
+    features: [
+      "AI-Powered Content Creation",
+      "Web3 & Blockchain Growth Marketing",
+      "Crypto Influencer Campaigns",
+      "Predictive Ad Optimization",
+      "AI-Driven Education & Funnel Marketing",
+      "SEO, Social Media, Google Ads, Branding"
+    ]
+  }
+];
+
 export default function Services() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeService, setActiveService] = useState(mobileServices[0].id);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % serviceSlides.length);
     }, 6000);
 
     return () => clearInterval(interval);
   }, []);
 
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
   return (
-    <section className="py-[120px] px-10 bg-white">
+    <section className="py-12 md:py-[120px] px-4 md:px-10 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-[60px]">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-[1.1]">PrimAI Innovation Suite</h2>
-          <p className="text-xl text-gray-600 leading-8">Comprehensive Solutions for the Decentralized Future</p>
+        <div className="text-center mb-8 md:mb-[60px]">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 md:mb-4 leading-tight">PrimAI Innovation Suite</h2>
+          <p className="text-base md:text-xl text-gray-600 leading-relaxed md:leading-8 px-2">Comprehensive Solutions for the Decentralized Future</p>
         </div>
 
-        <div className="relative overflow-hidden rounded-3xl bg-white p-[60px] shadow-xl border border-gray-200">
-          <div className="overflow-hidden relative">
-            <div className="flex transition-transform duration-700 ease-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-              {slides.map((slide, index) => (
-                <div key={index} className="min-w-full flex items-center justify-center gap-16 px-5 flex-shrink-0">
-                  <div className="flex-1 max-w-[500px] space-y-6">
-                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${slide.badgeColor} text-white rounded-full text-sm font-bold uppercase tracking-wider`}>
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      {slide.badge}
-                    </div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{slide.title}</h3>
-                    <p className="text-lg text-gray-600 leading-relaxed mb-8">{slide.description}</p>
-                    <ul className="space-y-3 mb-8">
-                      {slide.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-3 text-gray-700 font-medium">
-                          <span className="text-gray-400">→</span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full font-bold text-base hover:shadow-lg hover:scale-105 transition-all flex items-center gap-3">
-                      Explore Solutions
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </button>
+        {/* Mobile-First Service Cards */}
+        <div className="space-y-4 md:hidden">
+          {mobileServices.map((service) => (
+            <div
+              key={service.id}
+              className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-all cursor-pointer"
+              onClick={() => setActiveService(activeService === service.id ? '' : service.id)}
+            >
+              {/* Service Header */}
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-3">
+                  <div className={`w-10 h-10 rounded-full bg-gradient-to-r ${service.gradient} flex items-center justify-center text-white text-lg`}>
+                    {service.icon}
                   </div>
-
-                  <div className="flex-1 max-w-[500px] flex items-center justify-center">
-                    <div className="w-full h-full relative flex items-center justify-center">
-                      {slide.illustration}
-                    </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 text-base">{service.title}</h3>
+                    <p className="text-sm text-gray-600">{service.description}</p>
                   </div>
                 </div>
-              ))}
+                <svg
+                  className={`w-5 h-5 text-gray-400 transition-transform ${activeService === service.id ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+
+              {/* Expandable Features */}
+              {activeService === service.id && (
+                <div className="border-t border-gray-100 pt-3 mt-3">
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                        <span className="text-indigo-600 mt-0.5">•</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="mt-4 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-medium min-h-[44px] hover:shadow-lg transition-all">
+                    Explore Solutions
+                  </button>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop Auto-Scrolling Carousel */}
+        <div className="hidden md:block">
+          <div className="relative overflow-hidden rounded-2xl md:rounded-3xl bg-white p-6 md:p-[60px] shadow-xl border border-gray-200">
+            <div className="overflow-hidden relative">
+              <div className="flex transition-transform duration-700 ease-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                {serviceSlides.map((slide, index) => (
+                  <div key={index} className="min-w-full flex flex-col md:flex-row md:items-center md:justify-center gap-6 md:gap-16 px-1 md:px-5 flex-shrink-0">
+                    <div className="flex-1 max-w-full md:max-w-[500px] space-y-3 md:space-y-6 order-2 md:order-1 px-2 md:px-0">
+                      <div className={`inline-flex items-center gap-2 px-3 md:px-6 py-1.5 md:py-3 bg-gradient-to-r ${slide.badgeColor} text-white rounded-full text-xs md:text-sm font-bold uppercase tracking-wider`}>
+                        <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
+                        {slide.badge}
+                      </div>
+                      <h3 className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">{slide.title}</h3>
+                      <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4 md:mb-8">{slide.description}</p>
+                      <ul className="space-y-3 md:space-y-3 mb-6 md:mb-8">
+                        {slide.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-3 md:gap-3 text-gray-700 font-medium text-base md:text-base">
+                            <span className="text-indigo-600 mt-0.5 md:mt-0 text-lg">•</span>
+                            <span className="flex-1">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 md:px-10 py-4 rounded-full font-bold text-base md:text-base hover:shadow-lg hover:scale-105 transition-all flex items-center justify-center gap-3 md:gap-3 min-h-[48px] w-full md:w-auto">
+                        Explore Solutions
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div className="flex-1 max-w-full md:max-w-[500px] flex items-center justify-center order-1 md:order-2 px-2 md:px-0">
+                      <div className="w-full h-56 md:h-full relative flex items-center justify-center">
+                        {slide.illustration}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Progress bar */}
+            <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gray-200 overflow-hidden">
+              <div className="h-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-100 ease-linear" style={{ width: `${((currentSlide + 1) / serviceSlides.length) * 100}%` }}></div>
             </div>
           </div>
 
-          {/* Progress bar */}
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200 overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-100 ease-linear" style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}></div>
+          {/* Dots - Touch friendly */}
+          <div className="flex justify-center gap-3 md:gap-3 mt-6 md:mt-10">
+            {serviceSlides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 md:w-3 md:h-3 rounded-full transition-all min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0 flex items-center justify-center ${
+                  index === currentSlide
+                    ? 'bg-indigo-600 scale-125'
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
-        </div>
-
-        {/* Dots */}
-        <div className="flex justify-center gap-3 mt-10">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentSlide
-                  ? 'bg-indigo-600 w-8 rounded-md'
-                  : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-            />
-          ))}
         </div>
       </div>
     </section>

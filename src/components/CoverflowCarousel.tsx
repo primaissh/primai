@@ -65,15 +65,15 @@ export default function CoverflowCarousel() {
   };
 
   return (
-    <section className="py-[120px] px-10 bg-white overflow-hidden">
+    <section className="py-16 md:py-[120px] px-4 md:px-10 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-[80px]">
-          <div className="inline-block px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-semibold mb-4">Featured Projects</div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-[1.2]">Turning Imagination into impact </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-8">Discover how PrimAI transforms bold ideas into intelligent, real-world innovation through AI and blockchain.</p>
+        <div className="text-center mb-12 md:mb-[80px]">
+          <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-indigo-50 text-indigo-600 rounded-full text-xs md:text-sm font-semibold mb-3 md:mb-4">Featured Projects</div>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">Turning Imagination into impact</h2>
+          <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed md:leading-8 px-2">Discover how PrimAI transforms bold ideas into intelligent, real-world innovation through AI and blockchain.</p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto perspective-1200 pb-[100px]">
+        <div className="relative max-w-5xl mx-auto perspective-1200 pb-8 md:pb-[100px]">
           <div className="relative h-96 flex items-center justify-center">
             {carouselData.map((item, index) => {
               const position = index - currentIndex;
@@ -103,7 +103,7 @@ export default function CoverflowCarousel() {
               return (
                 <div
                   key={index}
-                  className={`absolute w-80 h-96 rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ease-out shadow-2xl preserve-3d ${transformClass}`}
+                  className={`absolute w-72 md:w-80 h-96 rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ease-out shadow-2xl preserve-3d ${transformClass}`}
                   style={{ zIndex }}
                   onClick={() => goToSlide(index)}
                 >
