@@ -15,8 +15,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile Logo */}
         <img
-          src="https://staticsource1.redotpay.com/web/img/logo.svg?t=1761894789332"
-          alt="RedotPay Logo"
+          src="/logo.svg"
+          alt="PrimAI Logo"
           className="mb-7.5 h-6 block sm:hidden"
         />
 
@@ -28,59 +28,98 @@ export default function Footer() {
           Swift<span className="text-blue-500">.</span> Seamless<span className="text-blue-500">.</span> Secure<span className="text-blue-500">.</span>
         </h2>
 
-        {/* QR Code Section (Desktop) and Links Grid - Desktop Layout */}
-        <div className="hidden lg:flex justify-between gap-8 mb-8">
-          {/* QR Code Section */}
-          <div className="flex-shrink-0">
-            <h4 className="text-base font-semibold mb-5">Scan to Download</h4>
-            <div className="rounded-2xl border-2 border-gray-500 bg-white/20 p-4">
-              <svg height="120" width="120" viewBox="0 0 29 29" role="img">
-                <path fill="#ffffff20" d="M0,0 h29v29H0z" shapeRendering="crispEdges"></path>
-                <path fill="#ffffff" d="M0 0h7v1H0zM8 0h1v1H8zM13 0h1v1H13zM15 0h4v1H15zM22,0 h7v1H22zM0 1h1v1H0zM6 1h1v1H6zM10 1h2v1H10zM16 1h1v1H16zM19 1h2v1H19zM22 1h1v1H22zM28,1 h1v1H28zM0 2h1v1H0zM2 2h3v1H2zM6 2h1v1H6zM9 2h2v1H9zM14 2h7v1H14zM22 2h1v1H22zM24 2h3v1H24zM28,2 h1v1H28zM0 3h1v1H0zM2 3h3v1H2zM6 3h1v1H6zM8 3h1v1H8zM10 3h1v1H10zM12 3h4v1H12zM18 3h2v1H18zM22 3h1v1H22zM24 3h3v1H24zM28,3 h1v1H28zM0 4h1v1H0zM2 4h3v1H2zM6 4h1v1H6zM8 4h2v1H8zM11 4h1v1H11zM13 4h4v1H13zM18 4h1v1H18zM20 4h1v1H20zM22 4h1v1H22zM24 4h3v1H24zM28,4 h1v1H28zM0 5h1v1H0zM6 5h1v1H6zM8 5h1v1H8zM10 5h3v1H10zM14 5h1v1H14zM19 5h1v1H19zM22 5h1v1H22zM28,5 h1v1H28zM0 6h7v1H0zM8 6h1v1H8zM10 6h1v1H10zM12 6h1v1H12zM14 6h1v1H14zM16 6h1v1H16zM18 6h1v1H18zM20 6h1v1H20zM22,6 h7v1H22zM8 7h1v1H8zM10 7h1v1H10zM12 7h1v1H12zM14 7h6v1H14zM0 8h1v1H0zM4 8h1v1H4zM6 8h3v1H6zM10 8h1v1H10zM13 8h6v1H13zM20 8h6v1H20zM28,8 h1v1H28zM2 9h4v1H2zM7 9h1v1H7zM9 9h1v1H9zM11 9h1v1H11zM14 9h5v1H14zM21,9 h8v1H21zM0 10h1v1H0zM2 10h2v1H2zM5 10h2v1H5zM8 10h1v1H8zM10 10h1v1H10zM12 10h5v1H12zM18 10h1v1H18zM22 10h1v1H22zM24 10h1v1H24zM28,10 h1v1H28zM0 11h2v1H0zM3 11h1v1H3zM5 11h1v1H5zM10 11h1v1H10zM12 11h2v1H12zM16 11h7v1H16zM24 11h2v1H24zM27,11 h2v1H27zM0 12h2v1H0zM4 12h3v1H4zM10 12h1v1H10zM13 12h1v1H13zM15 12h1v1H15zM20 12h1v1H20zM27 12h1v1H27zM1 13h2v1H1zM4 13h1v1H4zM7 13h2v1H7zM11 13h1v1H11zM13 13h6v1H13zM22,13 h7v1H22zM1 14h2v1H1zM4 14h3v1H4zM9 14h2v1H9zM12 14h1v1H12zM15 14h4v1H15zM20 14h1v1H20zM23 14h1v1H23zM25 14h2v1H25zM28,14 h1v1H28zM0 15h4v1H0zM7 15h2v1H7zM11 15h2v1H11zM14 15h1v1H14zM17 15h2v1H17zM21 15h1v1H21zM27,15 h2v1H27zM6 16h3v1H6zM13 16h2v1H13zM16 16h1v1H16zM20 16h2v1H20zM27 16h1v1H27zM0 17h3v1H0zM5 17h1v1H5zM7 17h3v1H7zM11 17h2v1H11zM15 17h1v1H15zM22 17h4v1H22zM27,17 h2v1H27zM3 18h2v1H3zM6 18h2v1H6zM9 18h1v1H9zM11 18h1v1H11zM13 18h3v1H13zM18 18h1v1H18zM26 18h1v1H26zM28,18 h1v1H28zM2 19h1v1H2zM4 19h2v1H4zM8 19h1v1H8zM13 19h1v1H13zM15 19h3v1H15zM20 19h1v1H20zM27,19 h2v1H27zM0 20h4v1H0zM5 20h2v1H5zM9 20h5v1H9zM16 20h1v1H16zM20 20h6v1H20zM28,20 h1v1H28zM8 21h1v1H8zM12 21h5v1H12zM18 21h3v1H18zM24 21h1v1H24zM28,21 h1v1H28zM0 22h7v1H0zM8 22h1v1H8zM12 22h1v1H12zM15 22h1v1H15zM17 22h4v1H17zM22 22h1v1H22zM24 22h3v1H24zM28,22 h1v1H28zM0 23h1v1H0zM6 23h1v1H6zM10 23h3v1H10zM14 23h1v1H14zM16 23h2v1H16zM19 23h2v1H19zM24 23h1v1H24zM27 23h1v1H27zM0 24h1v1H0zM2 24h3v1H2zM6 24h1v1H6zM8 24h2v1H8zM13 24h2v1H13zM16 24h2v1H16zM19 24h7v1H19zM27 24h1v1H27zM0 25h1v1H0zM2 25h3v1H2zM6 25h1v1H6zM9 25h1v1H9zM11 25h1v1H11zM15 25h1v1H15zM17 25h2v1H17zM20 25h2v1H20zM28,25 h1v1H28zM0 26h1v1H0zM2 26h3v1H2zM6 26h1v1H6zM10 26h6v1H10zM17 26h1v1H17zM19 26h1v1H19zM21 26h1v1H21zM25,26 h4v1H25zM0 27h1v1H0zM6 27h1v1H6zM9 27h1v1H9zM11 27h1v1H11zM13 27h1v1H13zM17 27h1v1H17zM20 27h1v1H20zM23 27h3v1H23zM27,27 h2v1H27zM0 28h7v1H0zM8 28h1v1H8zM11 28h1v1H11zM13 28h3v1H13zM17 28h2v1H17zM20 28h1v1H20zM22 28h1v1H22zM24 28h1v1H24zM27 28h1v1H27z" shapeRendering="crispEdges"></path>
-              </svg>
-            </div>
-          </div>
-
-          {/* Links Grid */}
-          <div className="grid grid-cols-4 gap-8 flex-1">
-            <div className="text-start">
-              <h4 className="mb-5 text-base font-semibold">Product & Features</h4>
-              <ul className="mt-5 space-y-3">
-                <li><a href="/card" className="text-gray-300 hover:text-white text-nowrap">Card</a></li>
-                <li><a href="/global-payout" className="text-gray-300 hover:text-white text-nowrap">Global Payout</a></li>
-                <li><a href="/multi-currency-wallet" className="text-gray-300 hover:text-white text-nowrap">Multi-Currency Wallet</a></li>
-                <li><a href="/credit" className="text-gray-300 hover:text-white text-nowrap">Credit</a></li>
-                <li><a href="/earn" className="text-gray-300 hover:text-white text-nowrap">Earn</a></li>
-                <li><a href="/swap" className="text-gray-300 hover:text-white text-nowrap">Swap</a></li>
-                <li><a href="/p2p-marketplace" className="text-gray-300 hover:text-white text-nowrap">P2P Marketplace</a></li>
-              </ul>
-            </div>
-            <div className="text-start">
+        {/* Links Grid - Desktop Layout */}
+        <div className="hidden lg:block mb-8">
+          <div className="grid grid-cols-5 gap-8">
+            {/* Row 1, Col 1 - Empty */}
+            <div className="text-start p-4"></div>
+            
+            {/* Row 1, Col 2 - Company */}
+            <div className="text-start p-4">
               <h4 className="mb-5 text-base font-semibold">Company</h4>
-              <ul className="mt-5 space-y-3">
-                <li><a href="/about-us" className="text-gray-300 hover:text-white text-nowrap">About Us</a></li>
-                <li><a href="/community" className="text-gray-300 hover:text-white text-nowrap">Community</a></li>
-                <li><a href="/affiliates" className="text-gray-300 hover:text-white text-nowrap">Affiliate</a></li>
+              <ul className="mt-5">
+                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/about-us" className="text-gray-300 hover:text-white text-nowrap">About Us</a></li>
+                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/community" className="text-gray-300 hover:text-white text-nowrap">Community</a></li>
+                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/affiliates" className="text-gray-300 hover:text-white text-nowrap">Affiliate</a></li>
               </ul>
             </div>
-            <div className="text-start">
+            
+            {/* Row 1, Col 3 - Resources */}
+            <div className="text-start p-4">
               <h4 className="mb-5 text-base font-semibold">Resources</h4>
-              <ul className="mt-5 space-y-3">
-                <li><a href="/news" className="text-gray-300 hover:text-white text-nowrap">News</a></li>
+              <ul className="mt-5">
+                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/news" className="text-gray-300 hover:text-white text-nowrap">Blogs</a></li>
               </ul>
             </div>
-            <div className="text-start">
+            
+            {/* Row 1, Col 4 - Support */}
+            <div className="text-start p-4">
               <h4 className="mb-5 text-base font-semibold">Support</h4>
-              <ul className="mt-5 space-y-3">
-                <li><a href="/contact-us" className="text-gray-300 hover:text-white text-nowrap">Contact Us</a></li>
-                <li><a href="https://helpcenter.redotpay.com" className="text-gray-300 hover:text-white text-nowrap">Help Center</a></li>
-                <li><a href="/terms" className="text-gray-300 hover:text-white text-nowrap">Terms & Conditions</a></li>
+              <ul className="mt-5">
+                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/contact-us" className="text-gray-300 hover:text-white text-nowrap">Contact Us</a></li>
+                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="https://helpcenter.redotpay.com" className="text-gray-300 hover:text-white text-nowrap">Help Center</a></li>
+                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/terms" className="text-gray-300 hover:text-white text-nowrap">Terms & Conditions</a></li>
+              </ul>
+            </div>
+            
+            {/* Row 1, Col 5 - Empty */}
+            <div className="text-start p-4"></div>
+
+            {/* Row 2, Col 1 - Crypto & Blockchain Solutions */}
+            <div className="text-start p-4">
+              <h5 className="text-sm font-semibold mb-3">Crypto & Blockchain Solutions</h5>
+              <ul className="text-xs text-gray-300">
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/centralized-exchange" className="hover:text-white transition-colors">Centralized Exchange (CEX)</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/ico-offering" className="hover:text-white transition-colors">ICO (Initial Coin Offering)</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/rwa-tokenization" className="hover:text-white transition-colors">RWA Tokenization (Real-World Asset)</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/blockchain-development" className="hover:text-white transition-colors">Layer 1 & Layer 2 Blockchain Development</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/wallets" className="hover:text-white transition-colors">Custodian & Non-Custodian Wallets</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/digital-identity" className="hover:text-white transition-colors">Digital Identity on Blockchain</a></li>
+              </ul>
+            </div>
+            
+            {/* Row 2, Col 2 - Trading & Financial Tools */}
+            <div className="text-start p-4">
+              <h5 className="text-sm font-semibold mb-3">Trading & Financial Tools</h5>
+              <ul className="text-xs text-gray-300">
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/trading-bot" className="hover:text-white transition-colors">AI-Powered Trading Bot</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/p2p-platform" className="hover:text-white transition-colors">P2P Trading Platform</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/carbon-marketing" className="hover:text-white transition-colors">Carbon Marketing Solutions</a></li>
+              </ul>
+            </div>
+            
+            {/* Row 2, Col 3 - AI & Generative Technology */}
+            <div className="text-start p-4">
+              <h5 className="text-sm font-semibold mb-3">AI & Generative Technology</h5>
+              <ul className="text-xs text-gray-300">
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/gen-ai-bot" className="hover:text-white transition-colors">Gen AI Bot</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/ai-chatbot" className="hover:text-white transition-colors">AI Chatbot</a></li>
+              </ul>
+            </div>
+            
+            {/* Row 2, Col 4 - Education & Community */}
+            <div className="text-start p-4">
+              <h5 className="text-sm font-semibold mb-3">Education & Community</h5>
+              <ul className="text-xs text-gray-300">
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/web3-education" className="hover:text-white transition-colors">Web3 Educational Platform</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/mlm-web3" className="hover:text-white transition-colors">MLM-Based Web3 Projects</a></li>
+              </ul>
+            </div>
+            
+            {/* Row 2, Col 5 - Advanced Digital Marketing */}
+            <div className="text-start p-4">
+              <h5 className="text-sm font-semibold mb-3">Advanced Digital Marketing</h5>
+              <ul className="text-xs text-gray-300">
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/content-creation" className="hover:text-white transition-colors">AI-Powered Content Creation</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/web3-growth-marketing" className="hover:text-white transition-colors">Web3 & Blockchain Growth Marketing</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/crypto-influencer" className="hover:text-white transition-colors">Crypto Influencer & Community Campaigns</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/ad-optimization" className="hover:text-white transition-colors">Predictive Ad Optimization & Automation</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/education-funnel" className="hover:text-white transition-colors">AI-Driven Education & Funnel Marketing</a></li>
+                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/seo-marketing" className="hover:text-white transition-colors">SEO, Social Media Marketing, Google Ads, Branding</a></li>
               </ul>
             </div>
           </div>
         </div>
-
-       
 
         {/* Mobile Accordions */}
         <div className="block sm:hidden w-full mb-8">
@@ -90,7 +129,7 @@ export default function Footer() {
               onClick={() => toggleAccordion('product')}
               className="w-full flex items-center justify-between py-4 text-left text-base font-semibold"
             >
-              Product & Features
+              Featured Products             
               <ChevronDown className={`w-6 h-6 transition-transform ${openAccordion === 'product' ? 'rotate-180' : ''}`} />
             </button>
             <div className={`pb-4 ${openAccordion === 'product' ? 'block' : 'hidden'}`}>
@@ -159,6 +198,57 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Services Row - Mobile/Tablet */}
+        <div className="block lg:hidden mb-8">
+          <h4 className="text-lg font-semibold mb-6 text-center">Our Services</h4>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            <div className="text-start">
+              <h5 className="text-sm font-semibold mb-3">Crypto & Blockchain Solutions</h5>
+              <ul className="text-xs text-gray-300 space-y-1">
+                <li>Centralized Exchange (CEX)</li>
+                <li>ICO (Initial Coin Offering)</li>
+                <li>RWA Tokenization (Real-World Asset)</li>
+                <li>Layer 1 & Layer 2 Blockchain Development</li>
+                <li>Custodian & Non-Custodian Wallets</li>
+                <li>Digital Identity on Blockchain</li>
+              </ul>
+            </div>
+            <div className="text-start">
+              <h5 className="text-sm font-semibold mb-3">Trading & Financial Tools</h5>
+              <ul className="text-xs text-gray-300 space-y-1">
+                <li>AI-Powered Trading Bot</li>
+                <li>P2P Trading Platform</li>
+                <li>Carbon Marketing Solutions</li>
+              </ul>
+            </div>
+            <div className="text-start">
+              <h5 className="text-sm font-semibold mb-3">AI & Generative Technology</h5>
+              <ul className="text-xs text-gray-300 space-y-1">
+                <li>Gen AI Bot</li>
+                <li>AI Chatbot</li>
+              </ul>
+            </div>
+            <div className="text-start">
+              <h5 className="text-sm font-semibold mb-3">Education & Community</h5>
+              <ul className="text-xs text-gray-300 space-y-1">
+                <li>Web3 Educational Platform</li>
+                <li>MLM-Based Web3 Projects</li>
+              </ul>
+            </div>
+            <div className="text-start">
+              <h5 className="text-sm font-semibold mb-3">Advanced Digital Marketing</h5>
+              <ul className="text-xs text-gray-300 space-y-1">
+                <li>AI-Powered Content Creation</li>
+                <li>Web3 & Blockchain Growth Marketing</li>
+                <li>Crypto Influencer & Community Campaigns</li>
+                <li>Predictive Ad Optimization & Automation</li>
+                <li>AI-Driven Education & Funnel Marketing</li>
+                <li>SEO, Social Media Marketing, Google Ads, Branding</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* Download Button (Mobile) */}
         <button className="w-full bg-white text-black border-none rounded-full py-4 px-6 text-lg font-medium flex items-center justify-center gap-3 mb-7.5 sm:hidden">
           Download App
@@ -189,9 +279,9 @@ export default function Footer() {
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
             </svg>
           </a>
-          <a href="https://t.me/RedotPayAnnouncement" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://t.me/primai" className="text-gray-400 hover:text-white transition-colors">
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-1.447-1.238-1.447-1.238s-.155-.093-.466-.09c-.28.003-.57.18-.57.18s-.586 1.353-.584 1.353c.754 3.406 1.797 5.023 1.797 5.023.104.093.2.18.326.246.12.066.245.1.37.1.266 0 .421-.15.421-.15s2.665-2.448 4.326-4.145c1.514-1.543 2.093-2.643 2.093-2.643s.35-.394.35-.394c.184-.172.276-.372.25-.57-.01-.02-.012-.04-.012-.058-.01-.093-.14-.18-.394-.25-.395-.106-.895-.222-1.395-.35-.496-.128-1.093-.286-1.793-.486-.7-.2-1.34-.394-1.94-.586-.6-.192-1.14-.38-1.64-.564-.5-.184-.96-.37-1.36-.554-.4-.184-.74-.37-.94-.554-.2-.184-.34-.37-.34-.37s-.06-.08-.18-.18c-.12-.1-.28-.18-.48-.18-.2 0-.38.08-.48.18-.1.1-.18.18-.18.18s-.18.184-.34.37c-.16.186-.3.37-.44.554-.14.184-.28.37-.42.554-.14.184-.26.37-.36.554-.1.184-.16.37-.16.37s-.08.08-.16.18c-.08.1-.14.18-.14.18s-.08.08-.14.18c-.06.1-.1.18-.1.18s-.04.08-.08.18c-.04.1-.06.18-.06.18s-.02.08-.04.18c-.02.1-.02.18-.02.18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18 0 .18s0 .08 0 .18c0 .1 0 .18" />
+              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-.633.335-1.787 1.122-.169.133-.322.198-.462.196-.152-.003-.446-.085-.663-.156-.267-.088-.48-.135-.461-.285.01-.078.125-.158.345-.24 1.353-.592 2.256-.987 2.708-1.183 1.29-.557 1.561-.654 1.738-.657z" />
             </svg>
           </a>
         </div>
@@ -199,7 +289,6 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t-2 border-gray-700 pt-5 pb-24 text-center">
           <p className="text-gray-400 text-sm mb-2.5">Copyright © 2025 PrimAi All Rights Reserved</p>
-          <p className="text-gray-400 text-sm">Inscripto bajo el N° 144 en el Registro de PSAV de la CNV (República Argentina).</p>
         </div>
       </div>
     </footer>

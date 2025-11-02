@@ -6,13 +6,15 @@ const slides = [
   {
     badge: "BLOCKCHAIN",
     badgeColor: "from-blue-600 to-purple-600",
-    title: "Next-Gen Blockchain Infrastructure",
-    description: "Build decentralized ecosystems with enterprise-grade security and scalability. From CEX platforms to Layer 1/2 networks.",
+    title: "Crypto & Blockchain Solutions",
+    description: "We design secure, scalable blockchain ecosystems that redefine transparency, trust, and digital ownership.",
     features: [
-      "High-Performance CEX – Secure trading platforms",
-      "RWA Tokenization – Digital asset transformation",
-      "Layer 1 & 2 Networks – Scalable blockchain deployment",
-      "Web5 Digital Identity – Decentralized verification"
+      "Centralized Exchange (CEX)",
+      "ICO (Initial Coin Offering)",
+      "RWA Tokenization (Real-World Asset)",
+      "Layer 1 & Layer 2 Blockchain Development",
+      "Custodian & Non-Custodian Wallets",
+      "Digital Identity on Blockchain"
     ],
     illustration: (
       <svg viewBox="0 0 400 400" className="w-full h-full">
@@ -48,13 +50,12 @@ const slides = [
   {
     badge: "TRADING",
     badgeColor: "from-green-400 to-teal-500",
-    title: "Smart Trading & Finance",
-    description: "AI-powered automation meets peer-to-peer innovation. Maximize profits with intelligent bots and sustainable carbon solutions.",
+    title: "Trading & Financial Tools",
+    description: " From market analytics to automated execution, our systems give you an intelligent edge in the world of digital finance.",
     features: [
-      "AI Trading Bots – Automated profit strategies",
-      "P2P Exchange – Instant peer settlement",
-      "Carbon Credits – Blockchain-based sustainability",
-      "Real-Time Analytics – Market intelligence"
+      "AI-Powered Trading Bot ",
+      "P2P Trading Platform",
+      "Carbon Marketing Solutions",
     ],
     illustration: (
       <svg viewBox="0 0 400 400" className="w-full h-full">
@@ -89,13 +90,11 @@ const slides = [
   {
     badge: "AI POWERED",
     badgeColor: "from-pink-500 to-yellow-500",
-    title: "Generative AI Revolution",
-    description: "Harness cutting-edge AI to create, automate, and engage. From content generation to intelligent customer support.",
+    title: "AI & Generative Technology",
+    description: "Harnessing advanced AI to build generative solutions that think, adapt, and evolve — just like you.",
     features: [
-      "Gen AI Bots – Content, images & video creation",
-      "Smart Chatbots – 24/7 intelligent engagement",
-      "NLP Integration – Natural language processing",
-      "Custom Models – Tailored AI solutions"
+      "Gen AI Bot ",
+      "AI Chatbot",
     ],
     illustration: (
       <svg viewBox="0 0 400 400" className="w-full h-full">
@@ -141,13 +140,11 @@ const slides = [
   {
     badge: "LEARN & EARN",
     badgeColor: "from-teal-400 to-pink-500",
-    title: "Web3 Education Ecosystem",
-    description: "Master blockchain, crypto, and decentralized tech through interactive learning. Build community-driven projects with MLM incentives.",
+    title: "Education & Community",
+    description: "A growing hub for innovators, learners, and creators — uniting people through knowledge, mentorship, and collaboration.",
     features: [
-      "Interactive Courses – Hands-on Web3 learning",
-      "MLM Web3 Projects – Multi-layer rewards system",
-      "Certification Programs – Industry-recognized credentials",
-      "Community Building – Network & collaborate"
+      "Web3 Educational Platform ",
+      "MLM-Based Web3 Projects",
     ],
     illustration: (
       <svg viewBox="0 0 400 400" className="w-full h-full">
@@ -179,6 +176,55 @@ const slides = [
         <line x1="200" y1="210" x2="160" y2="245" stroke="white" strokeWidth="2" opacity="0.5"/>
         <line x1="200" y1="210" x2="200" y2="245" stroke="white" strokeWidth="2" opacity="0.5"/>
         <line x1="200" y1="210" x2="240" y2="245" stroke="white" strokeWidth="2" opacity="0.5"/>
+      </svg>
+    )
+  },
+  {
+    badge: "MARKETING",
+    badgeColor: "from-orange-500 to-red-500",
+    title: "Advanced Digital Marketing",
+    description: "From performance analytics to predictive strategy — we help brands evolve, engage, and expand globally.",
+    features: [
+      "AI-Powered Content Creation",
+      "Web3 & Blockchain Growth Marketing",
+      "Crypto Influencer & Community Campaigns",
+      "Predictive Ad Optimization & Automation",
+      "AI-Driven Education & Funnel Marketing",
+      "SEO, Social Media Marketing, Google Ads, Branding",
+    ],
+    illustration: (
+      <svg viewBox="0 0 400 400" className="w-full h-full">
+        <defs>
+          <linearGradient id="gradMarketing1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{stopColor:'#ff9a9e', stopOpacity:1}} />
+            <stop offset="100%" style={{stopColor:'#fecfef', stopOpacity:1}} />
+          </linearGradient>
+          <linearGradient id="gradMarketing2" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style={{stopColor:'#667eea', stopOpacity:1}} />
+            <stop offset="100%" style={{stopColor:'#764ba2', stopOpacity:1}} />
+          </linearGradient>
+          <linearGradient id="gradMarketing3" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style={{stopColor:'#ff9a9e', stopOpacity:1}} />
+            <stop offset="100%" style={{stopColor:'#fecfef', stopOpacity:1}} />
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="180" fill="url(#gradMarketing1)" opacity="0.1"/>
+        <rect x="100" y="140" width="200" height="140" rx="12" fill="white" opacity="0.9"/>
+        <rect x="110" y="150" width="180" height="120" rx="8" fill="url(#gradMarketing2)"/>
+        <path d="M200 100 L280 130 L200 160 L120 130 Z" fill="white" opacity="0.9"/>
+        <path d="M200 110 L265 135 L200 150 L135 135 Z" fill="url(#gradMarketing3)"/>
+        <rect x="275" y="130" width="8" height="60" fill="url(#gradMarketing3)"/>
+        <circle cx="279" cy="130" r="8" fill="#ff9a9e"/>
+        <circle cx="200" cy="210" r="12" fill="white"/>
+        <circle cx="160" cy="245" r="10" fill="white" opacity="0.8"/>
+        <circle cx="200" cy="245" r="10" fill="white" opacity="0.8"/>
+        <circle cx="240" cy="245" r="10" fill="white" opacity="0.8"/>
+        <line x1="200" y1="210" x2="160" y2="245" stroke="white" strokeWidth="2" opacity="0.5"/>
+        <line x1="200" y1="210" x2="200" y2="245" stroke="white" strokeWidth="2" opacity="0.5"/>
+        <line x1="200" y1="210" x2="240" y2="245" stroke="white" strokeWidth="2" opacity="0.5"/>
+        <circle cx="150" cy="180" r="15" fill="#ff6b6b" opacity="0.8"/>
+        <circle cx="250" cy="180" r="15" fill="#4ecdc4" opacity="0.8"/>
+        <path d="M170 180 Q200 165 230 180" stroke="#ff9a9e" strokeWidth="3" fill="none" opacity="0.6"/>
       </svg>
     )
   }

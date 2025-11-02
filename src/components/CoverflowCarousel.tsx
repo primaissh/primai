@@ -4,40 +4,40 @@ import { useState, useEffect } from "react";
 
 const carouselData = [
   {
-    category: "DeFi Platform",
-    title: "Decentralized Exchange Revolution",
-    description: "Built a high-performance DEX handling $100M+ in daily trading volume with zero downtime.",
+    category: "Crypto & Block chain",
+    title: "Token Generation with WEb 3 page",
+    description: "Launch tokenized projects with end-to-end token sale management.",
     gradient: ["#667eea", "#764ba2"]
   },
   {
-    category: "NFT Marketplace",
-    title: "Next-Gen Digital Collectibles",
-    description: "Launched an NFT platform with 50K+ active users and seamless minting experience.",
+    category: "Trading & Financial Tools",
+    title: "Crypto TRading Bot ",
+    description: "Automated trading strategies for crypto and financialmarkets.",
     gradient: ["#4facfe", "#00f2fe"]
   },
   {
-    category: "AI Trading Bot",
-    title: "Intelligent Trading Automation",
-    description: "AI-powered bot achieving 85% success rate with advanced market prediction algorithms.",
+    category: "Web3 based Education & Community",
+    title: "Portfolio Website for Mlm/networking professionals",
+    description: "Affiliate-driven decentralized projects with multi-layer incentive structures.",
     gradient: ["#43e97b", "#38f9d7"]
   },
   {
-    category: "Layer 2 Solution",
-    title: "Scalable Blockchain Network",
-    description: "Developed L2 solution processing 10,000+ TPS with minimal gas fees.",
-    gradient: ["#fa709a", "#fee140"]
-  },
-  {
-    category: "Web3 Education",
-    title: "Interactive Learning Platform",
-    description: "Platform educating 100K+ users with hands-on blockchain development courses.",
+    category: "Web3",
+    title: "Business Webpage",
+    description: "rebuilt for the decentralized era. Sleek, secure, and smart websites powered by blockchain tech and AI automation.",
     gradient: ["#a8edea", "#fed6e3"]
   },
   {
-    category: "Digital Identity",
-    title: "Web5 Identity Solution",
-    description: "Decentralized identity platform securing 500K+ digital identities globally.",
+    category: "AI",
+    title: "AI chatbot",
+    description: "Intelligent conversational agents for customer support, onboarding, or engagement.",
     gradient: ["#f093fb", "#f5576c"]
+  },
+  {
+    category: "Advance Digital Marketing",
+    title: "Digital Marketing",
+    description: "From performance analytics to predictive strategy — we help brands evolve, engage, and expand globally.",
+    gradient: ["#fa709a", "#fee140"]
   }
 ];
 
@@ -108,7 +108,7 @@ export default function CoverflowCarousel() {
                   onClick={() => goToSlide(index)}
                 >
                   <div
-                    className="w-full h-full bg-gradient-to-br opacity-90 hover:scale-105 transition-transform"
+                    className="w-full h-full bg-gradient-to-br opacity-100 hover:scale-105 transition-transform"
                     style={{
                       background: `linear-gradient(135deg, ${item.gradient[0]}, ${item.gradient[1]})`
                     }}
