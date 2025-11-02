@@ -69,8 +69,8 @@ export default function CoverflowCarousel() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-[80px]">
           <div className="inline-block px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-semibold mb-4">Featured Projects</div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-[1.2]">Explore Our Success Stories</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-8">Discover how we've helped businesses transform with cutting-edge technology</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-[1.2]">Turning Imagination into impact </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-8">Discover how PrimAI transforms bold ideas into intelligent, real-world innovation through AI and blockchain.</p>
         </div>
 
         <div className="relative max-w-5xl mx-auto perspective-1200 pb-[100px]">

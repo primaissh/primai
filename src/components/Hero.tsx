@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="max-w-2xl">
           <div className={`inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-semibold mb-6 opacity-0 transition-all duration-600 ${isVisible ? 'opacity-100 translate-y-0' : 'translate-y-4'}`}>
             <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full animate-pulse"></div>
-            <span>Pioneering Web3 Innovation</span>
+            <span>Delivering Web3 Innovation</span>
           </div>
 
           <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 opacity-0 transition-all duration-600 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'translate-y-4'}`}>
@@ -34,8 +34,8 @@ export default function Hero() {
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            <button className="bg-white text-gray-700 border-2 border-gray-200 px-8 py-4 rounded-xl font-semibold hover:border-indigo-600 hover:text-indigo-600 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
-              Watch Demo
+            <button className="bg-purple-500 text-white border-2 border-gray-200 px-8 py-4 rounded-xl font-semibold hover:border-indigo-600 hover:text-indigo-600 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+              Get A Demo
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" fill="currentColor"/>
                 <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2"/>
@@ -43,10 +43,7 @@ export default function Hero() {
             </button>
           </div>
 
-          <div className={`flex gap-3 mt-8 opacity-0 transition-all duration-600 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'translate-y-4'}`}>
-            <div className="h-11 bg-black text-white rounded-lg px-4 py-3 text-xs font-semibold flex items-center">App Store</div>
-            <div className="h-11 bg-black text-white rounded-lg px-4 py-3 text-xs font-semibold flex items-center">Google Play</div>
-          </div>
+     
         </div>
 
         {/* Hero Visual */}
