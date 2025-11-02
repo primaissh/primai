@@ -1,13 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Hero() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  const [isVisible] = useState(true);
 
   return (
     <section className="min-h-screen flex items-center pt-16 pb-8 px-4 md:pt-20 md:pb-20 md:px-10 bg-gradient-to-b from-blue-50 to-white">

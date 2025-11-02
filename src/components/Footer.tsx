@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white pt-12 sm:pt-20 lg:pt-26">
+    <footer className="bg-gradient-to-b from-black via-gray-900 to-black text-white pt-12 sm:pt-20 lg:pt-26">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Main Heading */}
@@ -22,98 +22,76 @@ export default function Footer() {
           Swift<span className="text-blue-500">.</span> Seamless<span className="text-blue-500">.</span> Secure<span className="text-blue-500">.</span>
         </h2>
 
-        <div className="hidden lg:block mb-8">
-          <div className="grid grid-cols-5 gap-8">
-            {/* Row 1, Col 1 - Empty */}
-            <div className="text-start p-4"></div>
-            
-            {/* Row 1, Col 2 - Company */}
-            <div className="text-start p-4">
-              <h4 className="mb-5 text-base font-semibold">Company</h4>
-              <ul className="mt-5">
-                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/about-us" className="text-gray-300 hover:text-white text-nowrap">About Us</a></li>
-                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/community" className="text-gray-300 hover:text-white text-nowrap">Community</a></li>
-                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/affiliates" className="text-gray-300 hover:text-white text-nowrap">Affiliate</a></li>
+        <div className="hidden lg:block mb-12">
+          {/* Top Row: Company Links */}
+          <div className="flex justify-center gap-16 mb-12">
+            <div className="text-center">
+              <h4 className="mb-6 text-lg font-semibold">Company</h4>
+              <ul className="space-y-3">
+                <li><a href="/about-us" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="/community" className="text-gray-300 hover:text-white transition-colors">Community</a></li>
+                <li><a href="/affiliates" className="text-gray-300 hover:text-white transition-colors">Affiliate</a></li>
               </ul>
             </div>
-            
-            {/* Row 1, Col 3 - Resources */}
-            <div className="text-start p-4">
-              <h4 className="mb-5 text-base font-semibold">Resources</h4>
-              <ul className="mt-5">
-                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/news" className="text-gray-300 hover:text-white text-nowrap">Blogs</a></li>
+            <div className="text-center">
+              <h4 className="mb-6 text-lg font-semibold">Resources</h4>
+              <ul className="space-y-3">
+                <li><a href="/news" className="text-gray-300 hover:text-white transition-colors">Blogs</a></li>
               </ul>
             </div>
-            
-            {/* Row 1, Col 4 - Support */}
-            <div className="text-start p-4">
-              <h4 className="mb-5 text-base font-semibold">Support</h4>
-              <ul className="mt-5">
-                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/contact-us" className="text-gray-300 hover:text-white text-nowrap">Contact Us</a></li>
-                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="https://helpcenter.redotpay.com" className="text-gray-300 hover:text-white text-nowrap">Help Center</a></li>
-                <li className="p-2 rounded transition-colors hover:bg-gray-800"><a href="/terms" className="text-gray-300 hover:text-white text-nowrap">Terms & Conditions</a></li>
+            <div className="text-center">
+              <h4 className="mb-6 text-lg font-semibold">Support</h4>
+              <ul className="space-y-3">
+                <li><a href="/contact-us" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                <li><a href="https://helpcenter.redotpay.com" className="text-gray-300 hover:text-white transition-colors">Help Center</a></li>
+                <li><a href="/terms" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</a></li>
               </ul>
             </div>
-            
-            {/* Row 1, Col 5 - Empty */}
-            <div className="text-start p-4"></div>
           </div>
 
-          {/* Our Services Heading - Below Row 1 */}
-          <h4 className="text-xl font-semibold mb-6 text-center mt-8">Our Services</h4>
+          {/* Our Services Heading */}
+          <h4 className="text-2xl font-semibold mb-8 text-center">Our Services</h4>
 
-          <div className="grid grid-cols-5 gap-8">
-            {/* Row 2, Col 1 - Crypto & Blockchain Solutions */}
-            <div className="text-start p-4">
-              <h5 className="text-sm font-semibold mb-3">Crypto & Blockchain Solutions</h5>
-              <ul className="text-xs text-gray-300">
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/centralized-exchange" className="hover:text-white transition-colors">Centralized Exchange (CEX)</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/ico-offering" className="hover:text-white transition-colors">ICO (Initial Coin Offering)</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/rwa-tokenization" className="hover:text-white transition-colors">RWA Tokenization (Real-World Asset)</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/blockchain-development" className="hover:text-white transition-colors">Layer 1 & Layer 2 Blockchain Development</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/wallets" className="hover:text-white transition-colors">Custodian & Non-Custodian Wallets</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/digital-identity" className="hover:text-white transition-colors">Digital Identity on Blockchain</a></li>
+          {/* Services Grid: 3 columns for better balance */}
+          <div className="grid grid-cols-3 gap-12 max-w-6xl mx-auto">
+            <div className="text-center">
+              <h5 className="text-lg font-semibold mb-4 text-blue-400">Crypto & Blockchain Solutions</h5>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><a href="/centralized-exchange" className="hover:text-white transition-colors">Centralized Exchange (CEX)</a></li>
+                <li><a href="/ico-offering" className="hover:text-white transition-colors">ICO (Initial Coin Offering)</a></li>
+                <li><a href="/rwa-tokenization" className="hover:text-white transition-colors">RWA Tokenization (Real-World Asset)</a></li>
+                <li><a href="/blockchain-development" className="hover:text-white transition-colors">Layer 1 & Layer 2 Blockchain Development</a></li>
+                <li><a href="/wallets" className="hover:text-white transition-colors">Custodian & Non-Custodian Wallets</a></li>
+                <li><a href="/digital-identity" className="hover:text-white transition-colors">Digital Identity on Blockchain</a></li>
               </ul>
             </div>
-            
-            {/* Row 2, Col 2 - Trading & Financial Tools */}
-            <div className="text-start p-4">
-              <h5 className="text-sm font-semibold mb-3">Trading & Financial Tools</h5>
-              <ul className="text-xs text-gray-300">
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/trading-bot" className="hover:text-white transition-colors">AI-Powered Trading Bot</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/p2p-platform" className="hover:text-white transition-colors">P2P Trading Platform</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/carbon-marketing" className="hover:text-white transition-colors">Carbon Marketing Solutions</a></li>
+            <div className="text-center">
+              <h5 className="text-lg font-semibold mb-4 text-blue-400">Trading & Financial Tools</h5>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><a href="/trading-bot" className="hover:text-white transition-colors">AI-Powered Trading Bot</a></li>
+                <li><a href="/p2p-platform" className="hover:text-white transition-colors">P2P Trading Platform</a></li>
+                <li><a href="/carbon-marketing" className="hover:text-white transition-colors">Carbon Marketing Solutions</a></li>
+              </ul>
+              <h5 className="text-lg font-semibold mb-4 mt-8 text-blue-400">AI & Generative Technology</h5>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><a href="/gen-ai-bot" className="hover:text-white transition-colors">Gen AI Bot</a></li>
+                <li><a href="/ai-chatbot" className="hover:text-white transition-colors">AI Chatbot</a></li>
               </ul>
             </div>
-            
-            {/* Row 2, Col 3 - AI & Generative Technology */}
-            <div className="text-start p-4">
-              <h5 className="text-sm font-semibold mb-3">AI & Generative Technology</h5>
-              <ul className="text-xs text-gray-300">
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/gen-ai-bot" className="hover:text-white transition-colors">Gen AI Bot</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/ai-chatbot" className="hover:text-white transition-colors">AI Chatbot</a></li>
+            <div className="text-center">
+              <h5 className="text-lg font-semibold mb-4 text-blue-400">Education & Community</h5>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><a href="/web3-education" className="hover:text-white transition-colors">Web3 Educational Platform</a></li>
+                <li><a href="/mlm-web3" className="hover:text-white transition-colors">MLM-Based Web3 Projects</a></li>
               </ul>
-            </div>
-            
-            {/* Row 2, Col 4 - Education & Community */}
-            <div className="text-start p-4">
-              <h5 className="text-sm font-semibold mb-3">Education & Community</h5>
-              <ul className="text-xs text-gray-300">
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/web3-education" className="hover:text-white transition-colors">Web3 Educational Platform</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/mlm-web3" className="hover:text-white transition-colors">MLM-Based Web3 Projects</a></li>
-              </ul>
-            </div>
-            
-            {/* Row 2, Col 5 - Advanced Digital Marketing */}
-            <div className="text-start p-4">
-              <h5 className="text-sm font-semibold mb-3">Advanced Digital Marketing</h5>
-              <ul className="text-xs text-gray-300">
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/content-creation" className="hover:text-white transition-colors">AI-Powered Content Creation</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/web3-growth-marketing" className="hover:text-white transition-colors">Web3 & Blockchain Growth Marketing</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/crypto-influencer" className="hover:text-white transition-colors">Crypto Influencer & Community Campaigns</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/ad-optimization" className="hover:text-white transition-colors">Predictive Ad Optimization & Automation</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/education-funnel" className="hover:text-white transition-colors">AI-Driven Education & Funnel Marketing</a></li>
-                <li className="p-1 rounded transition-colors hover:bg-gray-800"><a href="/seo-marketing" className="hover:text-white transition-colors">SEO, Social Media Marketing, Google Ads, Branding</a></li>
+              <h5 className="text-lg font-semibold mb-4 mt-8 text-blue-400">Advanced Digital Marketing</h5>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><a href="/content-creation" className="hover:text-white transition-colors">AI-Powered Content Creation</a></li>
+                <li><a href="/web3-growth-marketing" className="hover:text-white transition-colors">Web3 & Blockchain Growth Marketing</a></li>
+                <li><a href="/crypto-influencer" className="hover:text-white transition-colors">Crypto Influencer & Community Campaigns</a></li>
+                <li><a href="/ad-optimization" className="hover:text-white transition-colors">Predictive Ad Optimization & Automation</a></li>
+                <li><a href="/education-funnel" className="hover:text-white transition-colors">AI-Driven Education & Funnel Marketing</a></li>
+                <li><a href="/seo-marketing" className="hover:text-white transition-colors">SEO, Social Media Marketing, Google Ads, Branding</a></li>
               </ul>
             </div>
           </div>
@@ -121,52 +99,80 @@ export default function Footer() {
 
        
 
+        {/* Company/Links Section - Mobile/Tablet */}
+        <div className="block lg:hidden mb-12">
+          <div className="flex flex-col space-y-8 text-center">
+            <div>
+              <h4 className="mb-6 text-lg font-semibold">Company</h4>
+              <ul className="space-y-3">
+                <li><a href="/about-us" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="/community" className="text-gray-300 hover:text-white transition-colors">Community</a></li>
+                <li><a href="/affiliates" className="text-gray-300 hover:text-white transition-colors">Affiliate</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-6 text-lg font-semibold">Resources</h4>
+              <ul className="space-y-3">
+                <li><a href="/news" className="text-gray-300 hover:text-white transition-colors">Blogs</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-6 text-lg font-semibold">Support</h4>
+              <ul className="space-y-3">
+                <li><a href="/contact-us" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                <li><a href="https://helpcenter.redotpay.com" className="text-gray-300 hover:text-white transition-colors">Help Center</a></li>
+                <li><a href="/terms" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* Services Row - Mobile/Tablet */}
         <div className="block lg:hidden mb-8">
-          <h4 className="text-lg font-semibold mb-6 text-center">Our Services</h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-            <div className="text-start">
-              <h5 className="text-sm font-semibold mb-3">Crypto & Blockchain Solutions</h5>
-              <ul className="text-xs text-gray-300 space-y-1">
-                <li>Centralized Exchange (CEX)</li>
-                <li>ICO (Initial Coin Offering)</li>
-                <li>RWA Tokenization (Real-World Asset)</li>
-                <li>Layer 1 & Layer 2 Blockchain Development</li>
-                <li>Custodian & Non-Custodian Wallets</li>
-                <li>Digital Identity on Blockchain</li>
+          <h4 className="text-xl font-semibold mb-8 text-center">Our Services</h4>
+          <div className="space-y-8">
+            <div className="text-center">
+              <h5 className="text-lg font-semibold mb-4 text-blue-400">Crypto & Blockchain Solutions</h5>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><a href="/centralized-exchange" className="hover:text-white transition-colors">Centralized Exchange (CEX)</a></li>
+                <li><a href="/ico-offering" className="hover:text-white transition-colors">ICO (Initial Coin Offering)</a></li>
+                <li><a href="/rwa-tokenization" className="hover:text-white transition-colors">RWA Tokenization (Real-World Asset)</a></li>
+                <li><a href="/blockchain-development" className="hover:text-white transition-colors">Layer 1 & Layer 2 Blockchain Development</a></li>
+                <li><a href="/wallets" className="hover:text-white transition-colors">Custodian & Non-Custodian Wallets</a></li>
+                <li><a href="/digital-identity" className="hover:text-white transition-colors">Digital Identity on Blockchain</a></li>
               </ul>
             </div>
-            <div className="text-start">
-              <h5 className="text-sm font-semibold mb-3">Trading & Financial Tools</h5>
-              <ul className="text-xs text-gray-300 space-y-1">
-                <li>AI-Powered Trading Bot</li>
-                <li>P2P Trading Platform</li>
-                <li>Carbon Marketing Solutions</li>
+            <div className="text-center">
+              <h5 className="text-lg font-semibold mb-4 text-blue-400">Trading & Financial Tools</h5>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><a href="/trading-bot" className="hover:text-white transition-colors">AI-Powered Trading Bot</a></li>
+                <li><a href="/p2p-platform" className="hover:text-white transition-colors">P2P Trading Platform</a></li>
+                <li><a href="/carbon-marketing" className="hover:text-white transition-colors">Carbon Marketing Solutions</a></li>
               </ul>
             </div>
-            <div className="text-start">
-              <h5 className="text-sm font-semibold mb-3">AI & Generative Technology</h5>
-              <ul className="text-xs text-gray-300 space-y-1">
-                <li>Gen AI Bot</li>
-                <li>AI Chatbot</li>
+            <div className="text-center">
+              <h5 className="text-lg font-semibold mb-4 text-blue-400">AI & Generative Technology</h5>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><a href="/gen-ai-bot" className="hover:text-white transition-colors">Gen AI Bot</a></li>
+                <li><a href="/ai-chatbot" className="hover:text-white transition-colors">AI Chatbot</a></li>
               </ul>
             </div>
-            <div className="text-start">
-              <h5 className="text-sm font-semibold mb-3">Education & Community</h5>
-              <ul className="text-xs text-gray-300 space-y-1">
-                <li>Web3 Educational Platform</li>
-                <li>MLM-Based Web3 Projects</li>
+            <div className="text-center">
+              <h5 className="text-lg font-semibold mb-4 text-blue-400">Education & Community</h5>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><a href="/web3-education" className="hover:text-white transition-colors">Web3 Educational Platform</a></li>
+                <li><a href="/mlm-web3" className="hover:text-white transition-colors">MLM-Based Web3 Projects</a></li>
               </ul>
             </div>
-            <div className="text-start">
-              <h5 className="text-sm font-semibold mb-3">Advanced Digital Marketing</h5>
-              <ul className="text-xs text-gray-300 space-y-1">
-                <li>AI-Powered Content Creation</li>
-                <li>Web3 & Blockchain Growth Marketing</li>
-                <li>Crypto Influencer & Community Campaigns</li>
-                <li>Predictive Ad Optimization & Automation</li>
-                <li>AI-Driven Education & Funnel Marketing</li>
-                <li>SEO, Social Media Marketing, Google Ads, Branding</li>
+            <div className="text-center">
+              <h5 className="text-lg font-semibold mb-4 text-blue-400">Advanced Digital Marketing</h5>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><a href="/content-creation" className="hover:text-white transition-colors">AI-Powered Content Creation</a></li>
+                <li><a href="/web3-growth-marketing" className="hover:text-white transition-colors">Web3 & Blockchain Growth Marketing</a></li>
+                <li><a href="/crypto-influencer" className="hover:text-white transition-colors">Crypto Influencer & Community Campaigns</a></li>
+                <li><a href="/ad-optimization" className="hover:text-white transition-colors">Predictive Ad Optimization & Automation</a></li>
+                <li><a href="/education-funnel" className="hover:text-white transition-colors">AI-Driven Education & Funnel Marketing</a></li>
+                <li><a href="/seo-marketing" className="hover:text-white transition-colors">SEO, Social Media Marketing, Google Ads, Branding</a></li>
               </ul>
             </div>
           </div>
@@ -175,7 +181,7 @@ export default function Footer() {
       
 
         {/* Social Links */}
-        <div className="flex justify-center gap-10 mb-8">
+        <div className="flex justify-center gap-8 mb-10">
           <a href="https://x.com/redotpay" className="text-gray-400 hover:text-white transition-colors">
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -206,8 +212,8 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t-2 border-gray-700 pt-5 pb-24 text-center">
-          <p className="text-gray-400 text-sm mb-2.5">Copyright © 2025 PrimAi All Rights Reserved</p>
+        <div className="border-t border-gray-600 pt-8 pb-12 text-center">
+          <p className="text-gray-400 text-sm">Copyright © 2025 PrimAi All Rights Reserved</p>
         </div>
       </div>
     </footer>
