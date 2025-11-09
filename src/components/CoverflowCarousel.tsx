@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useScrollAnimation } from "@/lib/useScrollAnimation";
 
 const carouselData = [
   {
@@ -42,6 +43,7 @@ const carouselData = [
 ];
 
 export default function CoverflowCarousel() {
+  const { elementRef: carouselRef, isVisible: carouselVisible } = useScrollAnimation({ threshold: 0.1 });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [remainingTime, setRemainingTime] = useState(10);
 
@@ -77,12 +79,12 @@ export default function CoverflowCarousel() {
   };
 
   return (
-    <section className="py-16 md:py-[120px] px-4 md:px-10 bg-white overflow-hidden">
+    <section ref={carouselRef} className="py-16 md:py-[120px] px-4 md:px-10 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 md:mb-[80px]">
-          <div className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-indigo-50 text-indigo-600 rounded-full text-xs md:text-sm font-semibold mb-3 md:mb-4">Featured Projects</div>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">Turning Imagination into impact</h2>
-          <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed md:leading-8 px-2">Discover how PrimAI transforms bold ideas into intelligent, real-world innovation through AI and blockchain.</p>
+          <div className={`inline-block px-3 md:px-4 py-1.5 md:py-2 bg-indigo-50 text-indigo-600 rounded-full text-xs md:text-sm font-semibold mb-3 md:mb-4 transition-all duration-600 ${carouselVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>Featured Projects</div>
+          <h2 className={`text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight transition-all duration-600 delay-200 ${carouselVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>Turning Imagination into impact</h2>
+          <p className={`text-base md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed md:leading-8 px-2 transition-all duration-600 delay-400 ${carouselVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>Discover how PrimAI transforms bold ideas into intelligent, real-world innovation through AI and blockchain.</p>
         </div>
 
         <div className="relative max-w-5xl mx-auto perspective-1200 pb-8 md:pb-[100px]">

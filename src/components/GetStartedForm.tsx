@@ -51,7 +51,7 @@ export default function GetStartedForm() {
   const selectedCountryOfResidence = watch("countryOfResidence");
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 pt-32 md:pt-28 pb-12 px-4">
       <div className="max-w-2xl mx-auto">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl">
           <div className="text-center mb-8">

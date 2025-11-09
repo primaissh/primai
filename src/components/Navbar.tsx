@@ -11,13 +11,15 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-[10px] border-b border-black/6 z-50 py-3 px-4 md:py-4 md:px-10">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <Image
-            src="/primai-logo.png"
-            alt="PrimAI Logo"
-            width={68}
-            height={60}
-            className="h-20 w-auto md:h-12"
-          />
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <Image
+              src="/primai-logo.png"
+              alt="PrimAI Logo"
+              width={68}
+              height={60}
+              className="h-20 w-auto md:h-12"
+            />
+          </Link>
         </div>
 
         {/* Mobile menu button */}

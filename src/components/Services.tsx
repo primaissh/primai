@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { useScrollAnimation } from "@/lib/useScrollAnimation";
 
 // Service slides data
 const serviceSlides = [
@@ -179,6 +180,7 @@ const mobileServices = [
 ];
 
 export default function Services() {
+  const { elementRef: servicesRef, isVisible: servicesVisible } = useScrollAnimation({ threshold: 0.1 });
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeService, setActiveService] = useState(mobileServices[0].id);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -222,11 +224,11 @@ export default function Services() {
   };
 
   return (
-    <section className="py-8 md:py-16 px-4 md:px-10 bg-gradient-to-br from-purple-50 to-purple-100 ">
+    <section ref={servicesRef} className="py-8 md:py-16 px-4 md:px-10 bg-gradient-to-br from-purple-50 to-purple-100 ">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-6 md:mb-10">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 md:mb-3 leading-tight">PrimAI Innovation Suite</h2>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed md:leading-7 px-2">Comprehensive Solutions for the Decentralized Future</p>
+          <h2 className={`text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 md:mb-3 leading-tight transition-all duration-600 ${servicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>PrimAI Innovation Suite</h2>
+          <p className={`text-base md:text-lg text-gray-600 leading-relaxed md:leading-7 px-2 transition-all duration-600 delay-200 ${servicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>Comprehensive Solutions for the Decentralized Future</p>
         </div>
 
         {/* Mobile-First Service Cards */}

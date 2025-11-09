@@ -1,9 +1,21 @@
+"use client";
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
+import { useScrollAnimation } from "@/lib/useScrollAnimation";
 
 export default function AffiliatePage() {
+  const { elementRef: welcomeRef, isVisible: welcomeVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { elementRef: bdeRef, isVisible: bdeVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { elementRef: bdmRef, isVisible: bdmVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { elementRef: bonusRef, isVisible: bonusVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { elementRef: promotionRef, isVisible: promotionVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { elementRef: scenariosRef, isVisible: scenariosVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { elementRef: whyRef, isVisible: whyVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { elementRef: referenceRef, isVisible: referenceVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { elementRef: ctaRef, isVisible: ctaVisible } = useScrollAnimation({ threshold: 0.1 });
   return (
     <div className="overflow-x-hidden">
       <Navbar />
@@ -37,7 +49,7 @@ export default function AffiliatePage() {
                 href="/get-started"
                 className="bg-white/10 backdrop-blur-lg text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20"
               >
-                Apply as BDM
+                Download The Affilliate Plan
               </Link>
             </div>
           </div>
@@ -47,7 +59,7 @@ export default function AffiliatePage() {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 py-16">
         {/* Welcome Section */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 mb-12">
+        <div ref={welcomeRef} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 mb-12 transition-all duration-600 ${welcomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="text-center mb-8">
             <span className="text-4xl mb-4 block">💎</span>
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -571,7 +583,7 @@ export default function AffiliatePage() {
               </div>
               <div className="bg-white/10 rounded-lg p-4">
                 <span className="text-2xl block mb-2">👔</span>
-                <p className="text-white font-semibold">Apply as a BDM</p>
+                <p className="text-white font-semibold">Role as a BDM</p>
                 <p className="text-gray-300 text-sm">Lead teams, multiply income</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4">
