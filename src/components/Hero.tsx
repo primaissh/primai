@@ -21,7 +21,7 @@ export default function Hero() {
         {/* Mobile Layout - Centered */}
         <div className="flex flex-col justify-center md:hidden">
           {/* Hero Content - Mobile */}
-          <div className="text-center mb-8">
+         <div className="text-center mb-8">
           <div className={`inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-indigo-600/20 text-white rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-6 opacity-0 transition-all duration-600 ${isVisible ? 'opacity-100 translate-y-0' : 'translate-y-4'}`}>
             <div className="w-1.5 h-1.5 bg-indigo-300 rounded-full animate-pulse"></div>
             <span>Delivering Web3 Innovation</span>
@@ -60,7 +60,7 @@ export default function Hero() {
         {/* Desktop Layout - Side by Side */}
         <div className="hidden md:grid md:grid-cols-2 md:gap-20 md:items-center">
           {/* Hero Content - Desktop Left */}
-          <div className="max-w-2xl">
+          <div>
             <div className={`inline-flex items-center gap-2 px-4 py-2 bg-indigo-600/20 text-white rounded-full text-sm font-semibold mb-6 opacity-0 transition-all duration-600 ${isVisible ? 'opacity-100 translate-y-0' : 'translate-y-4'}`}>
               <div className="w-1.5 h-1.5 bg-indigo-300 rounded-full animate-pulse"></div>
               <span>Delivering Web3 Innovation</span>
@@ -68,7 +68,7 @@ export default function Hero() {
 
             <h1 className={`text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 text-white opacity-0 transition-all duration-600 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'translate-y-4'}`}>
               <span className="block whitespace-nowrap">Build the Future with</span>
-              <span className="block whitespace-nowrap bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">AI, Blockchain & Web3</span>
+              <span className="block text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">AI, Blockchain & Web3</span>
             </h1>
 
             <p className={`text-xl text-gray-300 leading-relaxed mb-10 opacity-0 transition-all duration-600 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'translate-y-4'}`}>

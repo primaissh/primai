@@ -1,12 +1,17 @@
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 export default function AffiliatePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800">
+    <div className="overflow-x-hidden">
+      <Navbar />
+      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-32">
+        <div className="relative max-w-6xl mx-auto px-4 pt-32 md:pt-28 pb-24 md:pb-32">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg rounded-full px-6 py-3 mb-8">
               <span className="text-2xl">🚀</span>
@@ -195,35 +200,57 @@ export default function AffiliatePage() {
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold text-white mb-4">Bonus Examples:</h4>
-                <div className="bg-white/5 rounded-lg p-4">
+                <h4 className="text-lg md:text-xl font-semibold text-white mb-4">Bonus Examples:</h4>
+                {/* Mobile Card Layout */}
+                <div className="block md:hidden space-y-4">
+                  <div className="bg-white/5 rounded-lg p-4">
+                    <div className="text-white font-semibold mb-2">$100,000 Monthly Sales</div>
+                    <div className="text-gray-300 text-sm mb-1">Base Commission: $5,000 - $10,000</div>
+                    <div className="text-green-400 text-sm mb-1">Top Performer: +$1,000</div>
+                    <div className="text-green-400 font-bold">Total: $6,000 - $11,000</div>
+                  </div>
+                  <div className="bg-white/5 rounded-lg p-4">
+                    <div className="text-white font-semibold mb-2">$250,000 Monthly Sales</div>
+                    <div className="text-gray-300 text-sm mb-1">Base Commission: $12,500 - $25,000</div>
+                    <div className="text-green-400 text-sm mb-1">Top Performer: +$2,500</div>
+                    <div className="text-green-400 font-bold">Total: $15,000 - $27,500</div>
+                  </div>
+                  <div className="bg-white/5 rounded-lg p-4">
+                    <div className="text-white font-semibold mb-2">$500,000 Monthly Sales</div>
+                    <div className="text-gray-300 text-sm mb-1">Base Commission: $25,000 - $50,000</div>
+                    <div className="text-green-400 text-sm mb-1">Top Performer: +$5,000</div>
+                    <div className="text-green-400 font-bold">Total: $30,000 - $55,000</div>
+                  </div>
+                </div>
+                {/* Desktop Table Layout */}
+                <div className="hidden md:block bg-white/5 rounded-lg p-2 md:p-4 overflow-x-auto">
                   <table className="w-full text-white">
                     <thead>
                       <tr>
-                        <th className="text-left py-2">Your Monthly Sales</th>
-                        <th className="text-left py-2">Base Commission</th>
-                        <th className="text-left py-2">Top Performer (1%)</th>
-                        <th className="text-left py-2 font-bold">Total Earnings</th>
+                        <th className="text-left py-2 px-2">Your Monthly Sales</th>
+                        <th className="text-left py-2 px-2">Base Commission</th>
+                        <th className="text-left py-2 px-2">Top Performer (1%)</th>
+                        <th className="text-left py-2 px-2 font-bold">Total Earnings</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="py-2">$100,000</td>
-                        <td className="py-2">$5,000 - $10,000</td>
-                        <td className="py-2 text-green-400">+$1,000</td>
-                        <td className="py-2 font-bold text-green-400">$6,000 - $11,000</td>
+                        <td className="py-2 px-2">$100,000</td>
+                        <td className="py-2 px-2">$5,000 - $10,000</td>
+                        <td className="py-2 px-2 text-green-400">+$1,000</td>
+                        <td className="py-2 px-2 font-bold text-green-400">$6,000 - $11,000</td>
                       </tr>
                       <tr>
-                        <td className="py-2">$250,000</td>
-                        <td className="py-2">$12,500 - $25,000</td>
-                        <td className="py-2 text-green-400">+$2,500</td>
-                        <td className="py-2 font-bold text-green-400">$15,000 - $27,500</td>
+                        <td className="py-2 px-2">$250,000</td>
+                        <td className="py-2 px-2">$12,500 - $25,000</td>
+                        <td className="py-2 px-2 text-green-400">+$2,500</td>
+                        <td className="py-2 px-2 font-bold text-green-400">$15,000 - $27,500</td>
                       </tr>
                       <tr>
-                        <td className="py-2">$500,000</td>
-                        <td className="py-2">$25,000 - $50,000</td>
-                        <td className="py-2 text-green-400">+$5,000</td>
-                        <td className="py-2 font-bold text-green-400">$30,000 - $55,000</td>
+                        <td className="py-2 px-2">$500,000</td>
+                        <td className="py-2 px-2">$25,000 - $50,000</td>
+                        <td className="py-2 px-2 text-green-400">+$5,000</td>
+                        <td className="py-2 px-2 font-bold text-green-400">$30,000 - $55,000</td>
                       </tr>
                     </tbody>
                   </table>
@@ -255,30 +282,49 @@ export default function AffiliatePage() {
                   Any <strong className="text-white">Business Development Executive (BDE)</strong> who achieves the <strong className="text-white">highest monthly sales volume for 3 consecutive months</strong> automatically <strong className="text-yellow-400">replaces the current BDM and earns promotion to BDM status</strong>.
                 </p>
 
-                <div className="bg-white/5 rounded-lg p-4">
+                {/* Mobile Card Layout */}
+                <div className="block md:hidden space-y-3">
+                  <div className="bg-white/5 rounded-lg p-3">
+                    <div className="text-white font-semibold mb-2">Performance Period</div>
+                    <div className="text-gray-300 text-sm mb-1">Requirement: 3 consecutive months</div>
+                    <div className="text-yellow-400 text-sm">Reward: Automatic promotion</div>
+                  </div>
+                  <div className="bg-white/5 rounded-lg p-3">
+                    <div className="text-white font-semibold mb-2">Target</div>
+                    <div className="text-gray-300 text-sm mb-1">Requirement: Highest direct sales volume each month</div>
+                    <div className="text-yellow-400 text-sm">Reward: Replace existing BDM</div>
+                  </div>
+                  <div className="bg-white/5 rounded-lg p-3">
+                    <div className="text-white font-semibold mb-2">New Status</div>
+                    <div className="text-gray-300 text-sm mb-1">Requirement: BDM with full privileges</div>
+                    <div className="text-yellow-400 text-sm">Reward: 10% direct + 5% team bonuses</div>
+                  </div>
+                </div>
+                {/* Desktop Table Layout */}
+                <div className="hidden md:block bg-white/5 rounded-lg p-2 md:p-4 overflow-x-auto">
                   <table className="w-full text-white">
                     <thead>
                       <tr>
-                        <th className="text-left py-2">Criteria</th>
-                        <th className="text-left py-2">Requirement</th>
-                        <th className="text-left py-2">Reward</th>
+                        <th className="text-left py-2 px-2">Criteria</th>
+                        <th className="text-left py-2 px-2">Requirement</th>
+                        <th className="text-left py-2 px-2">Reward</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="py-2">Performance Period</td>
-                        <td className="py-2">3 consecutive months</td>
-                        <td className="py-2 text-yellow-400">Automatic promotion</td>
+                        <td className="py-2 px-2">Performance Period</td>
+                        <td className="py-2 px-2">3 consecutive months</td>
+                        <td className="py-2 px-2 text-yellow-400">Automatic promotion</td>
                       </tr>
                       <tr>
-                        <td className="py-2">Target</td>
-                        <td className="py-2">Highest direct sales volume each month</td>
-                        <td className="py-2 text-yellow-400">Replace existing BDM</td>
+                        <td className="py-2 px-2">Target</td>
+                        <td className="py-2 px-2">Highest direct sales volume each month</td>
+                        <td className="py-2 px-2 text-yellow-400">Replace existing BDM</td>
                       </tr>
                       <tr>
-                        <td className="py-2">New Status</td>
-                        <td className="py-2">BDM with full privileges</td>
-                        <td className="py-2 text-yellow-400">10% direct + 5% team bonuses</td>
+                        <td className="py-2 px-2">New Status</td>
+                        <td className="py-2 px-2">BDM with full privileges</td>
+                        <td className="py-2 px-2 text-yellow-400">10% direct + 5% team bonuses</td>
                       </tr>
                     </tbody>
                   </table>
@@ -286,49 +332,92 @@ export default function AffiliatePage() {
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold text-white mb-4">Real Example: The 3-Month Path to Leadership</h4>
-                <div className="bg-white/5 rounded-lg p-4">
+                <h4 className="text-lg md:text-xl font-semibold text-white mb-4">Real Example: The 3-Month Path to Leadership</h4>
+                {/* Mobile Card Layout */}
+                <div className="block md:hidden space-y-4">
+                  <div className="bg-white/5 rounded-lg p-4">
+                    <div className="text-white font-semibold mb-3">Month 1</div>
+                    <div className="space-y-2 text-sm">
+                      <div className="text-gray-300">Sales Closed: <span className="text-white">$200,000</span></div>
+                      <div className="text-gray-300">BDE Commission (5%): <span className="text-white">$10,000</span></div>
+                      <div className="text-green-400">Top Performer (1%): +$2,000</div>
+                      <div className="text-green-400 font-bold">Monthly Total: $12,000</div>
+                    </div>
+                  </div>
+                  <div className="bg-white/5 rounded-lg p-4">
+                    <div className="text-white font-semibold mb-3">Month 2</div>
+                    <div className="space-y-2 text-sm">
+                      <div className="text-gray-300">Sales Closed: <span className="text-white">$250,000</span></div>
+                      <div className="text-gray-300">BDE Commission (5%): <span className="text-white">$12,500</span></div>
+                      <div className="text-green-400">Top Performer (1%): +$2,500</div>
+                      <div className="text-green-400 font-bold">Monthly Total: $15,000</div>
+                    </div>
+                  </div>
+                  <div className="bg-white/5 rounded-lg p-4">
+                    <div className="text-white font-semibold mb-3">Month 3</div>
+                    <div className="space-y-2 text-sm">
+                      <div className="text-gray-300">Sales Closed: <span className="text-white">$300,000</span></div>
+                      <div className="text-gray-300">BDE Commission (5%): <span className="text-white">$15,000</span></div>
+                      <div className="text-green-400">Top Performer (1%): +$3,000</div>
+                      <div className="text-green-400 font-bold">Monthly Total: $18,000</div>
+                    </div>
+                  </div>
+                  <div className="bg-yellow-500/20 border border-yellow-400 rounded-lg p-4">
+                    <div className="text-yellow-400 font-semibold mb-2">3-Month Summary</div>
+                    <div className="space-y-1 text-sm">
+                      <div className="text-yellow-400">Total Sales: $750,000</div>
+                      <div className="text-yellow-400">Total Commission: $37,500</div>
+                      <div className="text-yellow-400">Total Top Performer: +$7,500</div>
+                      <div className="text-yellow-400 font-bold">Grand Total: $45,000</div>
+                    </div>
+                  </div>
+                  <div className="bg-yellow-500/20 border border-yellow-400 rounded-lg p-4">
+                    <div className="text-yellow-400 font-bold text-center">🎉 NEW STATUS → BDM PROMOTION</div>
+                  </div>
+                </div>
+                {/* Desktop Table Layout */}
+                <div className="hidden md:block bg-white/5 rounded-lg p-2 md:p-4 overflow-x-auto">
                   <table className="w-full text-white">
                     <thead>
                       <tr>
-                        <th className="text-left py-2">Month</th>
-                        <th className="text-left py-2">Sales Closed</th>
-                        <th className="text-left py-2">BDE Commission (5%)</th>
-                        <th className="text-left py-2">Top Performer (1%)</th>
-                        <th className="text-left py-2 font-bold">Monthly Total</th>
+                        <th className="text-left py-2 px-2">Month</th>
+                        <th className="text-left py-2 px-2">Sales Closed</th>
+                        <th className="text-left py-2 px-2">BDE Commission (5%)</th>
+                        <th className="text-left py-2 px-2">Top Performer (1%)</th>
+                        <th className="text-left py-2 px-2 font-bold">Monthly Total</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="py-2">Month 1</td>
-                        <td className="py-2">$200,000</td>
-                        <td className="py-2">$10,000</td>
-                        <td className="py-2 text-green-400">+$2,000</td>
-                        <td className="py-2 font-bold text-green-400">$12,000</td>
+                        <td className="py-2 px-2">Month 1</td>
+                        <td className="py-2 px-2">$200,000</td>
+                        <td className="py-2 px-2">$10,000</td>
+                        <td className="py-2 px-2 text-green-400">+$2,000</td>
+                        <td className="py-2 px-2 font-bold text-green-400">$12,000</td>
                       </tr>
                       <tr>
-                        <td className="py-2">Month 2</td>
-                        <td className="py-2">$250,000</td>
-                        <td className="py-2">$12,500</td>
-                        <td className="py-2 text-green-400">+$2,500</td>
-                        <td className="py-2 font-bold text-green-400">$15,000</td>
+                        <td className="py-2 px-2">Month 2</td>
+                        <td className="py-2 px-2">$250,000</td>
+                        <td className="py-2 px-2">$12,500</td>
+                        <td className="py-2 px-2 text-green-400">+$2,500</td>
+                        <td className="py-2 px-2 font-bold text-green-400">$15,000</td>
                       </tr>
                       <tr>
-                        <td className="py-2">Month 3</td>
-                        <td className="py-2">$300,000</td>
-                        <td className="py-2">$15,000</td>
-                        <td className="py-2 text-green-400">+$3,000</td>
-                        <td className="py-2 font-bold text-green-400">$18,000</td>
+                        <td className="py-2 px-2">Month 3</td>
+                        <td className="py-2 px-2">$300,000</td>
+                        <td className="py-2 px-2">$15,000</td>
+                        <td className="py-2 px-2 text-green-400">+$3,000</td>
+                        <td className="py-2 px-2 font-bold text-green-400">$18,000</td>
                       </tr>
                       <tr className="border-t border-white/20">
-                        <td className="py-2 font-bold text-yellow-400">3-Month Total</td>
-                        <td className="py-2 font-bold text-yellow-400">$750,000</td>
-                        <td className="py-2 font-bold text-yellow-400">$37,500</td>
-                        <td className="py-2 font-bold text-yellow-400">+$7,500</td>
-                        <td className="py-2 font-bold text-yellow-400">$45,000</td>
+                        <td className="py-2 px-2 font-bold text-yellow-400">3-Month Total</td>
+                        <td className="py-2 px-2 font-bold text-yellow-400">$750,000</td>
+                        <td className="py-2 px-2 font-bold text-yellow-400">$37,500</td>
+                        <td className="py-2 px-2 font-bold text-yellow-400">+$7,500</td>
+                        <td className="py-2 px-2 font-bold text-yellow-400">$45,000</td>
                       </tr>
                       <tr>
-                        <td className="py-2 font-bold text-yellow-400" colSpan={5}>NEW STATUS → BDM PROMOTION</td>
+                        <td className="py-2 px-2 font-bold text-yellow-400" colSpan={5}>NEW STATUS → BDM PROMOTION</td>
                       </tr>
                     </tbody>
                   </table>
@@ -515,6 +604,8 @@ export default function AffiliatePage() {
           </div>
         </div>
       </div>
+      </div>
+      <FloatingWhatsAppButton />
     </div>
   );
 }
