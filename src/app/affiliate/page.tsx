@@ -54,7 +54,6 @@ export default function AffiliatePage() {
                 Download The Affiliate Plan
               </a>
             </div>
-          </div>
         </div>
       </div>
 
@@ -276,7 +275,7 @@ export default function AffiliatePage() {
             </div>
           </div>
 
-          {/* Promotion Path */}
+          {/* Promotion Path Header */}
           <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-lg rounded-2xl p-8 md:p-12 border-2 border-yellow-400">
             <div className="text-center mb-8">
               <span className="text-4xl mb-4 block">4️⃣</span>
@@ -289,160 +288,173 @@ export default function AffiliatePage() {
               </h4>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-4">The Rule:</h4>
-                <p className="text-gray-300 mb-6">
-                  Any <strong className="text-white">Business Development Executive (BDE)</strong> who achieves the <strong className="text-white">highest monthly sales volume for 3 consecutive months</strong> automatically <strong className="text-yellow-400">replaces the current BDM and earns promotion to BDM status</strong>.
-                </p>
+          {/* The Rule Section */}
+          <div className="bg-gradient-to-r from-blue-500/20 to-indigo-500/20 backdrop-blur-lg rounded-2xl p-8 md:p-12 border-2 border-blue-400">
+            <div className="text-center mb-8">
+              <h4 className="text-xl font-semibold text-white mb-4">The Rule:</h4>
+            </div>
 
-                {/* Mobile Card Layout */}
-                <div className="block md:hidden space-y-3">
-                  <div className="bg-white/5 rounded-lg p-3">
-                    <div className="text-white font-semibold mb-2">Performance Period</div>
-                    <div className="text-gray-300 text-sm mb-1">Requirement: 3 consecutive months</div>
-                    <div className="text-yellow-400 text-sm">Reward: Automatic promotion</div>
-                  </div>
-                  <div className="bg-white/5 rounded-lg p-3">
-                    <div className="text-white font-semibold mb-2">Target</div>
-                    <div className="text-gray-300 text-sm mb-1">Requirement: Highest direct sales volume each month</div>
-                    <div className="text-yellow-400 text-sm">Reward: Replace existing BDM</div>
-                  </div>
-                  <div className="bg-white/5 rounded-lg p-3">
-                    <div className="text-white font-semibold mb-2">New Status</div>
-                    <div className="text-gray-300 text-sm mb-1">Requirement: BDM with full privileges</div>
-                    <div className="text-yellow-400 text-sm">Reward: 10% direct + 5% team bonuses</div>
-                  </div>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-gray-300 mb-6 text-center">
+                Any <strong className="text-white">Business Development Executive (BDE)</strong> who achieves the <strong className="text-white">highest monthly sales volume for 3 consecutive months</strong> automatically <strong className="text-yellow-400">replaces the current BDM and earns promotion to BDM status</strong>.
+              </p>
+
+              {/* Mobile Card Layout */}
+              <div className="block md:hidden space-y-3">
+                <div className="bg-white/5 rounded-lg p-3">
+                  <div className="text-white font-semibold mb-2">Performance Period</div>
+                  <div className="text-gray-300 text-sm mb-1">Requirement: 3 consecutive months</div>
+                  <div className="text-yellow-400 text-sm">Reward: Automatic promotion</div>
                 </div>
-                {/* Desktop Table Layout */}
-                <div className="hidden md:block bg-white/5 rounded-lg p-2 md:p-4 overflow-x-auto">
-                  <table className="w-full text-white">
-                    <thead>
-                      <tr>
-                        <th className="text-left py-2 px-2">Criteria</th>
-                        <th className="text-left py-2 px-2">Requirement</th>
-                        <th className="text-left py-2 px-2">Reward</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="py-2 px-2">Performance Period</td>
-                        <td className="py-2 px-2">3 consecutive months</td>
-                        <td className="py-2 px-2 text-yellow-400">Automatic promotion</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 px-2">Target</td>
-                        <td className="py-2 px-2">Highest direct sales volume each month</td>
-                        <td className="py-2 px-2 text-yellow-400">Replace existing BDM</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 px-2">New Status</td>
-                        <td className="py-2 px-2">BDM with full privileges</td>
-                        <td className="py-2 px-2 text-yellow-400">10% direct + 5% team bonuses</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div className="bg-white/5 rounded-lg p-3">
+                  <div className="text-white font-semibold mb-2">Target</div>
+                  <div className="text-gray-300 text-sm mb-1">Requirement: Highest direct sales volume each month</div>
+                  <div className="text-yellow-400 text-sm">Reward: Replace existing BDM</div>
+                </div>
+                <div className="bg-white/5 rounded-lg p-3">
+                  <div className="text-white font-semibold mb-2">New Status</div>
+                  <div className="text-gray-300 text-sm mb-1">Requirement: BDM with full privileges</div>
+                  <div className="text-yellow-400 text-sm">Reward: 10% direct + 5% team bonuses</div>
                 </div>
               </div>
-
-              <div>
-                <h4 className="text-lg md:text-xl font-semibold text-white mb-4">Real Example: The 3-Month Path to Leadership</h4>
-                {/* Mobile Card Layout */}
-                <div className="block md:hidden space-y-4">
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <div className="text-white font-semibold mb-3">Month 1</div>
-                    <div className="space-y-2 text-sm">
-                      <div className="text-gray-300">Sales Closed: <span className="text-white">$200,000</span></div>
-                      <div className="text-gray-300">BDE Commission (5%): <span className="text-white">$10,000</span></div>
-                      <div className="text-green-400">Top Performer (1%): +$2,000</div>
-                      <div className="text-green-400 font-bold">Monthly Total: $12,000</div>
-                    </div>
-                  </div>
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <div className="text-white font-semibold mb-3">Month 2</div>
-                    <div className="space-y-2 text-sm">
-                      <div className="text-gray-300">Sales Closed: <span className="text-white">$250,000</span></div>
-                      <div className="text-gray-300">BDE Commission (5%): <span className="text-white">$12,500</span></div>
-                      <div className="text-green-400">Top Performer (1%): +$2,500</div>
-                      <div className="text-green-400 font-bold">Monthly Total: $15,000</div>
-                    </div>
-                  </div>
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <div className="text-white font-semibold mb-3">Month 3</div>
-                    <div className="space-y-2 text-sm">
-                      <div className="text-gray-300">Sales Closed: <span className="text-white">$300,000</span></div>
-                      <div className="text-gray-300">BDE Commission (5%): <span className="text-white">$15,000</span></div>
-                      <div className="text-green-400">Top Performer (1%): +$3,000</div>
-                      <div className="text-green-400 font-bold">Monthly Total: $18,000</div>
-                    </div>
-                  </div>
-                  <div className="bg-yellow-500/20 border border-yellow-400 rounded-lg p-4">
-                    <div className="text-yellow-400 font-semibold mb-2">3-Month Summary</div>
-                    <div className="space-y-1 text-sm">
-                      <div className="text-yellow-400">Total Sales: $750,000</div>
-                      <div className="text-yellow-400">Total Commission: $37,500</div>
-                      <div className="text-yellow-400">Total Top Performer: +$7,500</div>
-                      <div className="text-yellow-400 font-bold">Grand Total: $45,000</div>
-                    </div>
-                  </div>
-                  <div className="bg-yellow-500/20 border border-yellow-400 rounded-lg p-4">
-                    <div className="text-yellow-400 font-bold text-center">🎉 NEW STATUS → BDM PROMOTION</div>
-                  </div>
-                </div>
-                {/* Desktop Table Layout */}
-                <div className="hidden md:block bg-white/5 rounded-lg p-2 md:p-4 overflow-x-auto">
-                  <table className="w-full text-white">
-                    <thead>
-                      <tr>
-                        <th className="text-left py-2 px-2">Month</th>
-                        <th className="text-left py-2 px-2">Sales Closed</th>
-                        <th className="text-left py-2 px-2">BDE Commission (5%)</th>
-                        <th className="text-left py-2 px-2">Top Performer (1%)</th>
-                        <th className="text-left py-2 px-2 font-bold">Monthly Total</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="py-2 px-2">Month 1</td>
-                        <td className="py-2 px-2">$200,000</td>
-                        <td className="py-2 px-2">$10,000</td>
-                        <td className="py-2 px-2 text-green-400">+$2,000</td>
-                        <td className="py-2 px-2 font-bold text-green-400">$12,000</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 px-2">Month 2</td>
-                        <td className="py-2 px-2">$250,000</td>
-                        <td className="py-2 px-2">$12,500</td>
-                        <td className="py-2 px-2 text-green-400">+$2,500</td>
-                        <td className="py-2 px-2 font-bold text-green-400">$15,000</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 px-2">Month 3</td>
-                        <td className="py-2 px-2">$300,000</td>
-                        <td className="py-2 px-2">$15,000</td>
-                        <td className="py-2 px-2 text-green-400">+$3,000</td>
-                        <td className="py-2 px-2 font-bold text-green-400">$18,000</td>
-                      </tr>
-                      <tr className="border-t border-white/20">
-                        <td className="py-2 px-2 font-bold text-yellow-400">3-Month Total</td>
-                        <td className="py-2 px-2 font-bold text-yellow-400">$750,000</td>
-                        <td className="py-2 px-2 font-bold text-yellow-400">$37,500</td>
-                        <td className="py-2 px-2 font-bold text-yellow-400">+$7,500</td>
-                        <td className="py-2 px-2 font-bold text-yellow-400">$45,000</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 px-2 font-bold text-yellow-400" colSpan={5}>NEW STATUS → BDM PROMOTION</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div className="bg-yellow-500/20 border border-yellow-400 rounded-lg p-4 mt-4">
-                  <p className="text-yellow-400 font-semibold">👑 Your Hustle = Your Promotion. No Waiting. No Politics. Just Results.</p>
-                </div>
+              {/* Desktop Table Layout */}
+              <div className="hidden md:block bg-white/5 rounded-lg p-2 md:p-4 overflow-x-auto">
+                <table className="w-full text-white">
+                  <thead>
+                    <tr>
+                      <th className="text-left py-2 px-2">Criteria</th>
+                      <th className="text-left py-2 px-2">Requirement</th>
+                      <th className="text-left py-2 px-2">Reward</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="py-2 px-2">Performance Period</td>
+                      <td className="py-2 px-2">3 consecutive months</td>
+                      <td className="py-2 px-2 text-yellow-400">Automatic promotion</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-2">Target</td>
+                      <td className="py-2 px-2">Highest direct sales volume each month</td>
+                      <td className="py-2 px-2 text-yellow-400">Replace existing BDM</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-2">New Status</td>
+                      <td className="py-2 px-2">BDM with full privileges</td>
+                      <td className="py-2 px-2 text-yellow-400">10% direct + 5% team bonuses</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
+<br />
+          {/* Real Example Section */}
+          <div className="bg-gradient-to-r from-blue-500/20 to-indigo-500/20 backdrop-blur-lg rounded-2xl p-8 md:p-12 border-2 border-blue-400">
+            <div className="text-center mb-8">
+              <h4 className="text-lg md:text-xl font-semibold text-white mb-4">Real Example: The 3-Month Path to Leadership</h4>
+            </div>
 
+            <div className="max-w-4xl mx-auto">
+              {/* Mobile Card Layout */}
+              <div className="block md:hidden space-y-4">
+                <div className="bg-white/5 rounded-lg p-4">
+                  <div className="text-white font-semibold mb-3">Month 1</div>
+                  <div className="space-y-2 text-sm">
+                    <div className="text-gray-300">Sales Closed: <span className="text-white">$200,000</span></div>
+                    <div className="text-gray-300">BDE Commission (5%): <span className="text-white">$10,000</span></div>
+                    <div className="text-green-400">Top Performer (1%): +$2,000</div>
+                    <div className="text-green-400 font-bold">Monthly Total: $12,000</div>
+                  </div>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <div className="text-white font-semibold mb-3">Month 2</div>
+                  <div className="space-y-2 text-sm">
+                    <div className="text-gray-300">Sales Closed: <span className="text-white">$250,000</span></div>
+                    <div className="text-gray-300">BDE Commission (5%): <span className="text-white">$12,500</span></div>
+                    <div className="text-green-400">Top Performer (1%): +$2,500</div>
+                    <div className="text-green-400 font-bold">Monthly Total: $15,000</div>
+                  </div>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <div className="text-white font-semibold mb-3">Month 3</div>
+                  <div className="space-y-2 text-sm">
+                    <div className="text-gray-300">Sales Closed: <span className="text-white">$300,000</span></div>
+                    <div className="text-gray-300">BDE Commission (5%): <span className="text-white">$15,000</span></div>
+                    <div className="text-green-400">Top Performer (1%): +$3,000</div>
+                    <div className="text-green-400 font-bold">Monthly Total: $18,000</div>
+                  </div>
+                </div>
+                <div className="bg-yellow-500/20 border border-yellow-400 rounded-lg p-4">
+                  <div className="text-yellow-400 font-semibold mb-2">3-Month Summary</div>
+                  <div className="space-y-1 text-sm">
+                    <div className="text-yellow-400">Total Sales: $750,000</div>
+                    <div className="text-yellow-400">Total Commission: $37,500</div>
+                    <div className="text-yellow-400">Total Top Performer: +$7,500</div>
+                    <div className="text-yellow-400 font-bold">Grand Total: $45,000</div>
+                  </div>
+                </div>
+                <div className="bg-yellow-500/20 border border-yellow-400 rounded-lg p-4">
+                  <div className="text-yellow-400 font-bold text-center">🎉 NEW STATUS → BDM PROMOTION</div>
+                </div>
+              </div>
+              {/* Desktop Table Layout */}
+              <div className="hidden md:block bg-white/5 rounded-lg p-2 md:p-4 overflow-x-auto">
+                <table className="w-full text-white">
+                  <thead>
+                    <tr>
+                      <th className="text-left py-2 px-2">Month</th>
+                      <th className="text-left py-2 px-2">Sales Closed</th>
+                      <th className="text-left py-2 px-2">BDE Commission (5%)</th>
+                      <th className="text-left py-2 px-2">Top Performer (1%)</th>
+                      <th className="text-left py-2 px-2 font-bold">Monthly Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="py-2 px-2">Month 1</td>
+                      <td className="py-2 px-2">$200,000</td>
+                      <td className="py-2 px-2">$10,000</td>
+                      <td className="py-2 px-2 text-green-400">+$2,000</td>
+                      <td className="py-2 px-2 font-bold text-green-400">$12,000</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-2">Month 2</td>
+                      <td className="py-2 px-2">$250,000</td>
+                      <td className="py-2 px-2">$12,500</td>
+                      <td className="py-2 px-2 text-green-400">+$2,500</td>
+                      <td className="py-2 px-2 font-bold text-green-400">$15,000</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-2">Month 3</td>
+                      <td className="py-2 px-2">$300,000</td>
+                      <td className="py-2 px-2">$15,000</td>
+                      <td className="py-2 px-2 text-green-400">+$3,000</td>
+                      <td className="py-2 px-2 font-bold text-green-400">$18,000</td>
+                    </tr>
+                    <tr className="border-t border-white/20">
+                      <td className="py-2 px-2 font-bold text-yellow-400">3-Month Total</td>
+                      <td className="py-2 px-2 font-bold text-yellow-400">$750,000</td>
+                      <td className="py-2 px-2 font-bold text-yellow-400">$37,500</td>
+                      <td className="py-2 px-2 font-bold text-yellow-400">+$7,500</td>
+                      <td className="py-2 px-2 font-bold text-yellow-400">$45,000</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-2 font-bold text-yellow-400" colSpan={5}>NEW STATUS → BDM PROMOTION</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="bg-yellow-500/20 border border-yellow-400 rounded-lg p-4 mt-4">
+                <p className="text-yellow-400 font-semibold">👑 Your Hustle = Your Promotion. No Waiting. No Politics. Just Results.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+          </div>
+          <br />
           {/* Earning Scenarios */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12">
             <div className="text-center mb-8">
@@ -481,7 +493,7 @@ export default function AffiliatePage() {
               </div>
             </div>
           </div>
-
+<br />
           {/* Why Choose PrimAI */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12">
             <div className="text-center mb-8">
@@ -528,7 +540,7 @@ export default function AffiliatePage() {
               </div>
             </div>
           </div>
-
+<br />
           {/* Quick Reference */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12">
             <div className="text-center mb-8">
@@ -567,7 +579,7 @@ export default function AffiliatePage() {
               </table>
             </div>
           </div>
-
+<br />
           {/* Call to Action */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center">
             <h3 className="text-3xl font-bold text-white mb-4">

@@ -52,45 +52,24 @@ export async function GET() {
           display: none !important;
         }
 
-        /* Add page breaks before each major section */
+        /* Allow natural page flow - only break when necessary */
         /* Welcome Section stays on first page with hero */
 
-        /* BDE Section - page 2 */
-        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(1) {
-          page-break-before: always;
-        }
-
-        /* BDM Section - page 3 */
-        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(2) {
-          page-break-before: always;
-        }
-
-        /* Top Performer Bonus Section - page 4 */
-        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(3) {
-          page-break-before: always;
-        }
-
-        /* Promotion Path Section - page 5 */
-        .bg-gradient-to-r.from-yellow-500\\/20.to-orange-500\\/20.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12.border-2.border-yellow-400 {
-          page-break-before: always;
-        }
-
-        /* Earning Scenarios Section - page 6 */
-        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(4) {
-          page-break-before: always;
-        }
-
-        /* Why Choose PrimAI Section - page 7 */
-        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(5) {
-          page-break-before: always;
-        }
-
-        /* Quick Reference Section - page 8 */
+        /* Force page break only for major section transitions */
+        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(1),
+        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(2),
+        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(3),
+        .bg-gradient-to-r.from-yellow-500\\/20.to-orange-500\\/20.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12.border-2.border-yellow-400:nth-of-type(1),
+        .bg-gradient-to-r.from-blue-500\\/20.to-indigo-500\\/20.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12.border-2.border-blue-400:nth-of-type(1),
+        .bg-gradient-to-r.from-blue-500\\/20.to-indigo-500\\/20.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12.border-2.border-blue-400:nth-of-type(2),
+        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(4),
+        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(5),
         .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12:nth-of-type(6) {
-          page-break-before: always;
+          page-break-before: auto;
+          page-break-after: auto;
         }
 
-        /* Call to Action Section - page 9 */
+        /* Only force page break for Call to Action to ensure it's on its own page */
         .bg-gradient-to-r.from-indigo-600.to-purple-600.rounded-2xl.p-8.md\\:p-12.text-center {
           page-break-before: always;
         }
@@ -98,6 +77,7 @@ export async function GET() {
         /* Prevent page breaks inside cards */
         .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12,
         .bg-gradient-to-r.from-yellow-500\\/20.to-orange-500\\/20.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12.border-2.border-yellow-400,
+        .bg-gradient-to-r.from-blue-500\\/20.to-indigo-500\\/20.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12.border-2.border-blue-400,
         .bg-gradient-to-r.from-indigo-600.to-purple-600.rounded-2xl.p-8.md\\:p-12.text-center {
           page-break-inside: avoid !important;
         }
@@ -113,10 +93,19 @@ export async function GET() {
           align-items: center !important;
         }
 
-        /* Ensure proper spacing at page breaks */
+        /* Ensure proper spacing between cards */
         .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12.mb-12,
-        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12 {
-          margin-bottom: 0 !important;
+        .bg-white\\/10.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12,
+        .bg-gradient-to-r.from-yellow-500\\/20.to-orange-500\\/20.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12.border-2.border-yellow-400,
+        .bg-gradient-to-r.from-blue-500\\/20.to-indigo-500\\/20.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12.border-2.border-blue-400,
+        .bg-gradient-to-r.from-indigo-600.to-purple-600.rounded-2xl.p-8.md\\:p-12.text-center {
+          margin-bottom: 30px !important;
+          margin-top: 20px !important;
+        }
+
+        /* Add extra spacing for yellow gradient cards */
+        .bg-gradient-to-r.from-yellow-500\\/20.to-orange-500\\/20.backdrop-blur-lg.rounded-2xl.p-8.md\\:p-12.border-2.border-yellow-400 {
+          margin-bottom: 40px !important;
         }
       `
     });
