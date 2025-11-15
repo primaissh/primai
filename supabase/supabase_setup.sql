@@ -1,3 +1,58 @@
+-- Create blog_posts table for storing blog content
+CREATE TABLE IF NOT EXISTS blog_posts (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  title TEXT NOT NULL,
+  content TEXT NOT NULL,
+  excerpt TEXT NOT NULL,
+  author TEXT NOT NULL,
+  tags JSONB DEFAULT '[]'::jsonb,
+  published BOOLEAN DEFAULT FALSE,
+  slug TEXT NOT NULL UNIQUE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Create indexes for blog_posts for better performance
+CREATE INDEX IF NOT EXISTS idx_blog_posts_published ON blog_posts(published);
+CREATE INDEX IF NOT EXISTS idx_blog_posts_slug ON blog_posts(slug);
+CREATE INDEX IF NOT EXISTS idx_blog_posts_created_at ON blog_posts(created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_blog_posts_author ON blog_posts(author);
+
+-- Enable Row Level Security (RLS) for blog_posts
+ALTER TABLE blog_posts ENABLE ROW LEVEL SECURITY;
+
+-- Create RLS policies for blog_posts
+-- Allow everyone to read published posts
+DROP POLICY IF EXISTS "blog_posts_allow_public_reads" ON blog_posts;
+CREATE POLICY "blog_posts_allow_public_reads" ON blog_posts
+  FOR SELECT
+  TO anon, authenticated
+  USING (published = true);
+
+-- Allow authenticated users (admins) full access to blog posts
+DROP POLICY IF EXISTS "blog_posts_allow_authenticated_full" ON blog_posts;
+CREATE POLICY "blog_posts_allow_authenticated_full" ON blog_posts
+  FOR ALL
+  TO authenticated
+  USING (true)
+  WITH CHECK (true);
+
+-- Optional: Create a view for published blog posts
+CREATE OR REPLACE VIEW published_blog_posts AS
+SELECT
+  id,
+  title,
+  content,
+  excerpt,
+  author,
+  tags,
+  slug,
+  created_at,
+  updated_at
+FROM blog_posts
+WHERE published = true
+ORDER BY created_at DESC;
+
 -- Create primai_form_submissions table for storing form data
 CREATE TABLE IF NOT EXISTS primai_form_submissions (
   id SERIAL PRIMARY KEY,

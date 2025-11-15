@@ -179,6 +179,231 @@ A **government-grade**, **enterprise-level** business platform featuring cutting
 - **Content Prioritization**: Mobile-optimized content flow and feature access
 - **Device Adaptation**: Specific experiences for tablets, desktops, and large screens
 
+## 🔐 **Admin Panel Documentation**
+
+The PrimAI platform includes a comprehensive **enterprise-grade admin panel** for content management, user submissions tracking, and system administration. The admin panel provides modern, secure, and feature-rich interfaces for managing all aspects of the platform.
+
+### 🚪 **Admin Access & Authentication**
+
+#### **Login Credentials**
+- **URL**: `http://localhost:3000/admin/login` or `https://yourdomain.com/admin/login`
+- **Username/Email**: `admin@primai.com`
+- **Password**: `primai2024`
+- **Session Duration**: 24 hours (auto-expiration with localStorage)
+
+#### **Security Features**
+- **Hard-coded credentials** for initial access (production deployments should implement proper user management)
+- **Session-based authentication** with automatic logout on expiration
+- **Route protection** - unauthenticated users redirected to login
+- **24-hour session timeout** with automatic cleanup
+- **Secure logout** functionality with session clearing
+
+### 📊 **Admin Dashboard (`/admin/dashboard`)**
+
+The central hub for admin operations with real-time statistics and quick access to all management features.
+
+#### **Key Features:**
+- **Live Statistics Cards**:
+  - Total blog posts (published vs draft)
+  - Form submission counts
+  - Recent activity metrics
+- **Quick Action Buttons**: Direct access to create content and manage submissions
+- **Recent Activity Feeds**: Latest blog posts and form submissions
+- **Navigation Hub**: Access all admin sections from central location
+
+#### **Visual Design:**
+- **Gradient backgrounds** and premium UI styling
+- **Responsive card layouts** with hover animations
+- **Real-time data updates** via Supabase queries
+- **Mobile-optimized interface** with collapsible elements
+
+### ✍️ **Blog Management System (`/admin/blog`)**
+
+Complete content management system for blog posts with modern CRUD operations.
+
+#### **Content Creation (`/admin/blog` - Create Mode)**
+- **Rich Form Interface**: Title, content, excerpt, author fields
+- **Tag Management**: Multi-tag system with visual tag display
+- **Auto-generated Slugs**: URL-friendly identifiers from titles
+- **Publish/Draft Toggle**: Immediate publishing or draft saving
+- **Real-time Preview**: Live preview of content while editing
+- **Form Validation**: Zod schema validation with error feedback
+
+#### **Blog Listing & Management**
+- **Advanced Filtering**: Search by title, author, tags, and status
+- **Sortable Columns**: Click headers to sort by any field
+- **Status Indicators**: Visual badges for published/draft posts
+- **Bulk Operations**: Select multiple posts for actions
+- **Pagination**: Efficient loading with page navigation
+- **Responsive Table**: Mobile-friendly data display
+
+#### **Edit Functionality**
+- **Inline Editing**: Modify existing posts with same interface as creation
+- **Version History**: Update timestamps and change tracking
+- **Content Preservation**: Safe editing without data loss
+
+### 📝 **Form Submissions Management (`/admin/submissions`)**
+
+Enterprise-grade form data management with advanced filtering and analysis.
+
+#### **Overview Dashboard**
+- **Statistics Cards**: Total submissions, BDE vs General apps, weekly metrics
+- **Percentage Analytics**: Application type distributions
+- **Activity Tracking**: Recent submissions with time indicators
+
+#### **Advanced Search & Filtering**
+- **Multi-field Search**: Name, email, service, country search
+- **Type Filtering**: BDE Applications, General Inquiries, or All
+- **Real-time Filtering**: Instant results as you type
+- **Smart Matching**: Comprehensive text matching across fields
+
+#### **Dual View Modes**
+- **Table View**: Sortable data grid with bulk actions
+- **Card View**: Visual cards for detailed submission previews
+- **Smooth Transitions**: Toggle between views seamlessly
+
+#### **Sorting & Pagination**
+- **Multi-column Sorting**: Sort by name, email, type, date, service
+- **Advanced Pagination**: Jump to pages with result counters
+- **Items Per Page**: Configurable display limits (default: 10)
+
+#### **Submission Details**
+- **Full Detail Modal**: Comprehensive applicant information
+- **Contact Integration**: Direct mail/phone links
+- **Location Data**: Country of origin/residence tracking
+- **Application Type**: Business Development vs General categorization
+- **Timestamp Information**: Full submission and activity tracking
+
+#### **Bulk Operations**
+- **Checkbox Selection**: Individual or select-all functionality
+- **Bulk Delete**: Mass removal with confirmation dialogs
+- **Selection Feedback**: Visual indicators and counters
+- **Safety Measures**: Confirmation prompts prevent accidents
+
+#### **Data Export**
+- **CSV Export**: Download all or filtered submissions
+- **Comprehensive Fields**: All submission data included
+- **Date-stamped Files**: Automatic filename generation
+- **Filtered Exports**: Only export currently visible results
+
+### 🔗 **Navigation & Access Control**
+
+#### **Admin Navigation Links**
+- **Navbar Integration**: Purple-themed admin links when logged in
+- **Conditional Display**: Only visible to authenticated admin users
+- **Mobile Responsive**: Collapsible menu with admin sections
+- **Breadcrumb Navigation**: Clear path indication within admin areas
+
+#### **Protected Routes**
+- **Automatic Redirects**: Unauthenticated users sent to login
+- **Session Validation**: Real-time authentication checking
+- **Route Guards**: Client-side protection for all admin pages
+- **Context Preservation**: Return to intended destination after login
+
+#### **Admin Landing Pages**
+- **Clean Access Denied**: Professional messaging for unauthorized access
+- **Quick Login Links**: Direct access to admin login from any page
+- **Return Navigation**: Easy return to public site content
+
+### 🗄️ **Database Schema & Setup**
+
+#### **Blog Posts Table**
+```sql
+CREATE TABLE blog_posts (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  title TEXT NOT NULL,
+  content TEXT NOT NULL,
+  excerpt TEXT NOT NULL,
+  author TEXT NOT NULL,
+  tags JSONB DEFAULT '[]'::jsonb,
+  published BOOLEAN DEFAULT FALSE,
+  slug TEXT NOT NULL UNIQUE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+```
+
+#### **Form Submissions Table**
+```sql
+CREATE TABLE primai_form_submissions (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  required_service TEXT,
+  country_of_origin VARCHAR(255) NOT NULL,
+  country_of_residence VARCHAR(255) NOT NULL,
+  mobile_number VARCHAR(20) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  application_type VARCHAR(50) DEFAULT 'general',
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+```
+
+#### **Security Policies**
+- **Row Level Security (RLS)** enabled on all tables
+- **Public Read Access**: Published blog posts accessible to everyone
+- **Authenticated Writes**: Full CRUD for admin users only
+- **Form Submissions**: Anonymous inserts, admin-only reads
+
+### ⚙️ **Technical Implementation**
+
+#### **Authentication System (`src/lib/auth.ts`)**
+- **localStorage Sessions**: Client-side session management
+- **Admin Credentials**: Centralized credential management
+- **Session Utilities**: Login, logout, and validation functions
+- **Expiration Handling**: Automatic cleanup of expired sessions
+
+#### **Admin Components Architecture**
+- **Protected Routes**: Authentication checks in useEffect hooks
+- **State Management**: Complex state handling for tables, filters, pagination
+- **API Integration**: Direct Supabase operations for CRUD actions
+- **Error Handling**: Comprehensive error states and user feedback
+- **Loading States**: Skeleton screens and progressive loading
+
+#### **Modern UI Features**
+- **Gradient Designs**: Premium visual styling throughout
+- **Micro-interactions**: Hover effects, animations, transitions
+- **Responsive Grid**: Adaptive layouts for all screen sizes
+- **Status Indicators**: Color-coded badges and visual feedback
+- **Performance Optimization**: Efficient rendering with pagination
+
+### 🚀 **Getting Started with Admin Panel**
+
+1. **Access Admin Login**
+   ```
+   Visit: http://localhost:3000/admin/login
+   Credentials: admin@primai.com / primai2024
+   ```
+
+2. **Navigate Dashboard**
+   - View statistics and recent activity
+   - Access quick actions for content creation
+
+3. **Manage Blog Content**
+   - Create new posts with the rich editor
+   - Edit existing content inline
+   - Publish or save as drafts
+
+4. **Monitor Form Submissions**
+   - Track all website form submissions
+   - Filter by application type
+   - Export data for external analysis
+
+5. **Security & Access**
+   - Admin links appear in navigation when logged in
+   - Automatic session management
+   - Secure logout with session cleanup
+
+### 🎯 **Production Deployment Considerations**
+
+- **User Management**: Implement proper user accounts instead of hard-coded credentials
+- **Environment Variables**: Move credentials to secure environment configuration
+- **Session Storage**: Consider server-side session management for scalability
+- **Audit Logging**: Add comprehensive activity logging for compliance
+- **Backup Strategy**: Regular database backups and recovery procedures
+
+---
+
 ## Supabase Setup
 
 1. Create a new project at [supabase.com](https://supabase.com)
