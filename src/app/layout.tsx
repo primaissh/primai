@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { defaultMetadata } from "@/lib/metadata";
+import StickyLeadCTA from "@/components/layout/StickyLeadCTA";
+import CommandPalette from "@/components/layout/CommandPalette";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "PrimAI",
-  description: "AI-powered solutions for modern businesses",
-  icons: {
-    icon: "/primai-logo.png",
-  },
-};
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
   children,
@@ -26,11 +28,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark scroll-smooth">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#3B82F6" />
+        <link rel="icon" href="/primai-logo.png" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased bg-void text-text-primary min-h-screen selection:bg-electric/30 selection:text-text-primary`}
       >
         {children}
+        <StickyLeadCTA />
+        <CommandPalette />
       </body>
     </html>
   );
