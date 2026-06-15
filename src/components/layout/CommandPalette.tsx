@@ -107,7 +107,7 @@ export default function CommandPalette() {
               <div className="max-h-[350px] overflow-y-auto p-2 space-y-1">
                 {filteredItems.length === 0 ? (
                   <div className="p-4 text-center text-sm text-text-muted">
-                    No results found for "{search}"
+                    No results found for &quot;{search}&quot;
                   </div>
                 ) : (
                   filteredItems.map((item, index) => {

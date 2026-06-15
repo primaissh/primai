@@ -1,3 +1,4 @@
+import React from "react";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -10,7 +11,7 @@ import { getServiceSchema } from "@/lib/schema";
 
 interface ServiceData {
   title: string;
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
   desc: string;
   features: { title: string; desc: string }[];
   process: string[];

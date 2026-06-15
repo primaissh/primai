@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MessageCircle, Mail, X, PhoneCall } from "lucide-react";
+import { MessageCircle, X, PhoneCall } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "../ui/Button";
 
@@ -89,7 +89,7 @@ export default function StickyLeadCTA() {
               </button>
               <h4 className="text-sm font-semibold mb-2">Book a Free Strategy Call</h4>
               <p className="text-xs text-text-secondary mb-4">
-                Let's discuss how we can automate your ops, build your dApp, or scale your trading systems.
+                Let&apos;s discuss how we can automate your ops, build your dApp, or scale your trading systems.
               </p>
               <form onSubmit={handleEmailSubmit} className="flex gap-2">
                 <input
@@ -167,9 +167,9 @@ export default function StickyLeadCTA() {
               >
                 <X className="w-5 h-5" />
               </button>
-              <h3 className="text-xl font-bold mb-2">Wait! Don't Miss Out</h3>
+              <h3 className="text-xl font-bold mb-2">Wait! Don&apos;t Miss Out</h3>
               <p className="text-sm text-text-secondary mb-4">
-                Get a free architectural audit of your company's processes. Find out how AI or automation could cut costs by up to 60%.
+                Get a free architectural audit of your company&apos;s processes. Find out how AI or automation could cut costs by up to 60%.
               </p>
               <div className="flex flex-col gap-3">
                 <Button
@@ -185,7 +185,7 @@ export default function StickyLeadCTA() {
                   onClick={() => setShowExitModal(false)}
                   className="text-xs text-text-muted hover:text-text-primary transition-colors"
                 >
-                  No thanks, I'd rather stay manual
+                  No thanks, I&apos;d rather stay manual
                 </button>
               </div>
             </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Cpu, Share2, Layers, TrendingUp, Terminal, BarChart2, Users, Network } from "lucide-react";
+import { Cpu, Share2, Layers, TrendingUp, Terminal, BarChart2, Users } from "lucide-react";
 import GlassCard from "../ui/GlassCard";
 import SectionLabel from "../ui/SectionLabel";
 import { motion } from "framer-motion";
@@ -99,7 +99,7 @@ export default function WhatWeBuild() {
           What We Build for the AI Era
         </h2>
         <p className="text-sm md:text-base text-text-secondary max-w-xl mx-auto">
-          We construct the core computational intelligence, smart nodes, and automatic architectures powering tomorrow's enterprises.
+          We construct the core computational intelligence, smart nodes, and automatic architectures powering tomorrow&apos;s enterprises.
         </p>
       </div>
 

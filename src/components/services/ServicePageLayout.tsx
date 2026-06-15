@@ -26,6 +26,7 @@ type CtaFormData = z.infer<typeof ctaFormSchema>;
 export interface SubService {
   title: string;
   description: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon: any; // Lucide Icon component
   badge: string;
   accent: "electric" | "neon" | "cyan" | "emerald" | "coral" | "amber";
@@ -332,7 +333,7 @@ export default function ServicePageLayout({
                 Application Received!
               </h3>
               <p className="text-xs text-text-secondary max-w-sm mx-auto leading-relaxed">
-                We'll reach out within 24 hours. Connect on WhatsApp for instant routing.
+                We&apos;ll reach out within 24 hours. Connect on WhatsApp for instant routing.
               </p>
               <a
                 href="https://wa.me/918333947726?text=Hi%20PrimAI,%20I'm%20asking%20about%20your%20services."

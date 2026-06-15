@@ -52,7 +52,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="text-base md:text-xl text-text-secondary max-w-2xl leading-relaxed"
         >
-          AI systems, blockchain infrastructure, and algorithmic trading engines for companies that can't afford to be second.
+          AI systems, blockchain infrastructure, and algorithmic trading engines for companies that can&apos;t afford to be second.
         </motion.p>
 
         {/* CTA Row */}

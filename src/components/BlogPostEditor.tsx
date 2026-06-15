@@ -58,7 +58,6 @@ export default function BlogPostEditor({
     handleSubmit,
     watch,
     setValue,
-    control,
     formState: { errors, isDirty },
   } = useForm<BlogPostFormData>({
     resolver: zodResolver(blogPostSchema),
@@ -78,14 +77,6 @@ export default function BlogPostEditor({
     },
   });
 
-  // Watch content for statistics and auto-save
-  useEffect(() => {
-    const watchedContent = watch('content');
-    if (watchedContent) {
-      updateStatistics(watchedContent);
-    }
-  }, [watch('content')]);
-
   const updateStatistics = useCallback((content: string) => {
     const words = content.trim().split(/\s+/).filter(word => word.length > 0);
     const chars = content.length;
@@ -98,8 +89,16 @@ export default function BlogPostEditor({
     });
   }, []);
 
+  const watchedContent = watch('content');
+
+  // Watch content for statistics and auto-save
+  useEffect(() => {
+    if (watchedContent) {
+      updateStatistics(watchedContent);
+    }
+  }, [watchedContent, updateStatistics]);
+
   const watchedTitle = watch('title') || '';
-  const watchedContent = watch('content') || '';
   const watchedExcerpt = watch('excerpt') || '';
   const watchedAuthor = watch('author') || '';
   const watchedCategories = watch('categories') || [];

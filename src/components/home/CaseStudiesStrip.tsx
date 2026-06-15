@@ -67,7 +67,7 @@ export default function CaseStudiesStrip() {
             Metric-Driven Deployments
           </h2>
           <p className="text-sm md:text-base text-text-secondary max-w-lg">
-            Real software running in production. We don't just deliver mock-ups; we scale operations.
+            Real software running in production. We don&apos;t just deliver mock-ups; we scale operations.
           </p>
         </div>
         <Link

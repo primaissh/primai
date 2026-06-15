@@ -37,7 +37,7 @@ export default function TechEcosystem() {
           The Stack Behind Everything We Build
         </h2>
         <p className="text-sm md:text-base text-text-secondary max-w-xl mx-auto">
-          We integrate best-in-class tools and robust protocols so you don't have to make architectural tradeoffs.
+          We integrate best-in-class tools and robust protocols so you don&apos;t have to make architectural tradeoffs.
         </p>
       </div>
 

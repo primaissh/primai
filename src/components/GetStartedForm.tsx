@@ -124,6 +124,7 @@ export default function GetStartedForm() {
     trigger,
     formState: { errors, isSubmitting },
   } = useForm<FormData>({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     resolver: zodResolver(formSchema as any),
   });
 
@@ -190,7 +191,7 @@ export default function GetStartedForm() {
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-white mb-4">{isBdeMode ? "Apply as BDE" : "Get Started"}</h1>
-            <p className="text-gray-300">Fill out the form below and we'll get back to you with a personalized solution.</p>
+            <p className="text-gray-300">Fill out the form below and we&apos;ll get back to you with a personalized solution.</p>
           </div>
 
           <form key={key} onSubmit={handleSubmit(onSubmit)} className="space-y-6">

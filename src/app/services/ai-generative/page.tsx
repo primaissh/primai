@@ -7,7 +7,6 @@ import MeshBackground from "@/components/ui/MeshBackground";
 import GlassCard from "@/components/ui/GlassCard";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { Sparkles, MessageSquare, Database, ArrowRightLeft, Cpu, RefreshCcw } from "lucide-react";
-import { motion } from "framer-motion";
 
 export default function AiGenerativeService() {
   const subServices = [

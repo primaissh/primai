@@ -14,8 +14,6 @@ export default function HeroCanvas() {
     let scene: THREE.Scene;
     let camera: THREE.PerspectiveCamera;
     let renderer: THREE.WebGLRenderer;
-    let particles: THREE.Points;
-    let lineSegments: THREE.LineSegments;
 
     const particleCount = 500; // Perfect count for aesthetic density and performance
     const maxDistance = 110;
@@ -34,7 +32,7 @@ export default function HeroCanvas() {
       container.appendChild(renderer.domElement);
     } catch (e) {
       console.error("WebGL initialization failed, falling back to static gradient.", e);
-      setWebglError(true);
+      setTimeout(() => setWebglError(true), 0);
       return;
     }
 
@@ -84,7 +82,7 @@ export default function HeroCanvas() {
       depthWrite: false,
     });
 
-    particles = new THREE.Points(particleGeometry, particleMaterial);
+    const particles = new THREE.Points(particleGeometry, particleMaterial);
     scene.add(particles);
 
     // Lines
@@ -102,7 +100,7 @@ export default function HeroCanvas() {
       depthWrite: false,
     });
 
-    lineSegments = new THREE.LineSegments(lineGeometry, lineMaterial);
+    const lineSegments = new THREE.LineSegments(lineGeometry, lineMaterial);
     scene.add(lineSegments);
 
     // Mouse parallax

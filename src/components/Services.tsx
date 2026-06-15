@@ -203,9 +203,12 @@ export default function Services() {
   }, []);
 
   useEffect(() => {
-    setIsAnimating(true);
+    const animTimer = setTimeout(() => setIsAnimating(true), 0);
     const timer = setTimeout(() => setIsAnimating(false), 800);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(animTimer);
+      clearTimeout(timer);
+    };
   }, [currentSlide]);
 
   const goToSlide = (index: number) => {

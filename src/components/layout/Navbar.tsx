@@ -27,8 +27,11 @@ export default function Navbar() {
 
   // Close menus on page transition
   useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveMegaMenu(null);
+    const timer = setTimeout(() => {
+      setMobileMenuOpen(false);
+      setActiveMegaMenu(null);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   const triggerCommandPalette = () => {

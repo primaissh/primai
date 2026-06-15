@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MeshBackground from "@/components/ui/MeshBackground";
@@ -18,7 +18,7 @@ interface TechItem {
 interface StackData {
   title: string;
   desc: string;
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
   items: TechItem[];
 }
 
