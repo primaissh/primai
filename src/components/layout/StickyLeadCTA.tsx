@@ -58,8 +58,8 @@ export default function StickyLeadCTA() {
 
   return (
     <>
-      {/* Desktop Sticky lead CTA (bottom-right) */}
-      <div className="hidden md:block fixed bottom-6 right-6 z-50">
+      {/* Desktop Sticky lead CTA (middle-right) */}
+      <div className="hidden md:block fixed right-6 top-[calc(50%+30px)] -translate-y-1/2 z-50">
         <AnimatePresence mode="wait">
           {!isExpanded ? (
             <motion.button
