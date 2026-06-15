@@ -30,7 +30,7 @@ export default function CaseStudiesPage() {
       title: "Hedge Fund Arbitrage Execution Engine",
       desc: "Built a sub-millisecond multi-exchange spot & futures arbitrage executor.",
       metrics: [
-        { label: "Trading Volume", value: 340, prefix: "↑ ", suffix: "%" },
+        { label: "Trading Volume.", value: 340, prefix: "↑ ", suffix: "%" },
         { label: "Ops Overhead", value: 60, prefix: "↓ ", suffix: "%" },
         { label: "Settlement Speed", value: 4, prefix: "⚡ ", suffix: "×" },
       ],
@@ -112,11 +112,10 @@ export default function CaseStudiesPage() {
             <button
               key={tab.id}
               onClick={() => setActiveFilter(tab.id)}
-              className={`px-4 py-2 rounded-full font-mono text-xs font-bold transition-all ${
-                activeFilter === tab.id
+              className={`px-4 py-2 rounded-full font-mono text-xs font-bold transition-all ${activeFilter === tab.id
                   ? "bg-electric text-white shadow-lg shadow-electric/25"
                   : "bg-glass border border-border text-text-secondary hover:text-text-primary hover:border-border/80"
-              } cursor-pointer`}
+                } cursor-pointer`}
             >
               {tab.label}
             </button>
